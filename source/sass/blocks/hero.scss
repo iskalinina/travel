@@ -1,0 +1,245 @@
+.hero__items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero__item {
+  position: relative;
+
+  @include vp-1199 {
+    min-height: 1024px;
+  }
+
+  @include vp-1199 {
+    min-height: 568px;
+  }
+}
+
+.hero__background {
+  z-index: -5;
+  width: 100vw;
+  background-color: rgba($color-accent, 0.5);
+}
+
+.hero__background img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero__content {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1199 {
+    padding-top: 212px;
+    padding-bottom: 187px;
+  }
+
+  @include vp-767 {
+    padding-top: 140px;
+    padding-bottom: 165px;
+  }
+}
+
+.hero__content h2 {
+  @include text(77px, 77px, $ff-extrabold);
+
+  color: $color-default-white;
+  margin: 0 0 23px;
+  z-index: 1;
+
+  @include vp-1199 {
+    @include text(56px, 56px, $ff-extrabold);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    @include text(26px, 26px, $ff-extrabold);
+  }
+}
+
+.hero__content > p {
+  @include text(17px, 24px);
+
+  color: $color-default-white;
+  max-width: 464px;
+  margin: 0 0 37px;
+
+  @include vp-1199 {
+    margin: 0 auto 25px;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    @include text(15px, 20px);
+    margin: 0 auto 60px;
+  }
+}
+
+.hero__button {
+  margin-bottom: 134px;
+
+  @include vp-1199 {
+    margin: 0 auto 45px;
+  }
+
+  @include vp-767 {
+    margin: 0 auto;
+  }
+}
+
+.hero__info {
+  display: flex;
+  gap: 10px;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+
+.hero__info p {
+  @include text(12px, 16px);
+
+  color: $color-default-white;
+  padding: 14px 20px 14px 40px;
+  margin: 0;
+  outline: 1px solid rgba(255, 255, 255, 0.50);
+  outline-offset: -1px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.hero__duration p::before {
+  background-image: url("../img/svg/duration-icon.svg");
+}
+
+.hero__level p::before {
+  background-image: url("../img/svg/level-icon.svg");
+}
+
+.hero__play-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid $color-default-white;
+  background-color: $color-transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero__media {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 120px;
+  bottom: 154px;
+
+  @include vp-1199 {
+    width: min-content;
+    position: relative;
+    top: 0;
+    left: 50%;
+    bottom: initial;
+    right: initial;
+    transform: translateX(-50%);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &--music {
+    overflow: hidden;
+    border-radius: 12px;
+    height: 227px;
+  }
+
+  &--photo {
+    max-width: 442px;
+  }
+}
+
+.hero__media-poster {
+  width: 482px;
+  height: 317px;
+
+  @include vp-1199 {
+    width: 442px;
+    height: 300px;
+  }
+}
+
+.hero__pagination {
+  margin-left: auto;
+  width: 70px;
+  position: absolute;
+  bottom: 87px;
+  right: 120px;
+
+  @include vp-1199 {
+    position: relative;
+    margin: 0 auto;
+    right: 0;
+    bottom: 30px;
+  }
+
+  @include vp-767 {
+    width: 64px;
+    bottom: 50px;
+  }
+}
+
+.hero__pagination .swiper-pagination {
+  display: flex;
+  gap: 20px;
+}
+
+.hero__pagination .swiper-pagination .swiper-pagination-bullet {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $color-default-white;
+  background-color: $color-transparent;
+  padding: 0;
+  flex-shrink: 0;
+  opacity: 1;
+  margin: 0;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.hero__pagination .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: $color-default-white;
+}
