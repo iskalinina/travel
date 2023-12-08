@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {initSliderHero} from './modules/sliders/slider-hero';
+import {initSliderTours} from './modules/sliders/slider-tours';
 import {setupVideo} from './modules/video/init-video';
 import './modules/menu/toggler.js';
 
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   initSliderHero();
+  initSliderTours();
   setupVideo();
 
   // Modules

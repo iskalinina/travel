@@ -19,16 +19,15 @@
 .hero__background {
   z-index: -5;
   width: 100vw;
+  height: 100%;
+  position: absolute;
   background-color: rgba($color-accent, 0.5);
 }
 
 .hero__background img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .hero__content {
@@ -40,12 +39,11 @@
 
   @include vp-1199 {
     padding-top: 212px;
-    padding-bottom: 187px;
+    padding-bottom: 0;
   }
 
   @include vp-767 {
     padding-top: 140px;
-    padding-bottom: 165px;
   }
 }
 
@@ -212,12 +210,11 @@
     position: relative;
     margin: 0 auto;
     right: 0;
-    bottom: 95px;
+    bottom: 30px;
   }
 
   @include vp-767 {
     width: 64px;
-    bottom: 50px;
   }
 }
 
@@ -237,10 +234,29 @@
   flex-shrink: 0;
   opacity: 1;
   margin: 0;
+  position: relative;
 
   @include vp-767 {
     width: 8px;
     height: 8px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: rgba($color-default-white, 0.5);
+  }
+
+  &:focus::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-transparent;
+    border: 1px solid rgba($color-default-white, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
   }
 }
 

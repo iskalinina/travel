@@ -1,0 +1,238 @@
+.tours {
+  position: relative;
+  padding-top: 123px;
+}
+
+.tours__heading {
+  @include  text(35px, 35px, $ff-extrabold);
+
+  color: $color-dark;
+  margin: 0 0 50px;
+  position: relative;
+
+  &::before {
+    @include text(55px, 55pxx, $ff-extrabold);
+
+    content: attr(data-heading);
+    opacity: 0.03;
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    z-index: -1;
+
+  }
+}
+
+.tours__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.tours__item {
+  width: calc((100% - 60px) / 3);
+  min-height: 416px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.tours__item-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.tours__item-background img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.tours__content {
+  color: $color-default-white;
+}
+
+.tours__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.tours__item h3 {
+  @include text(24px, 28px, $ff-bold);
+
+  color: $color-default-white;
+  margin: 0 0 30px;
+}
+
+.tours__header p {
+  @include text(12px, 12px, $ff-medium);
+
+  margin: 0;
+}
+
+.tours__location {
+  background-color: $color-accent;
+  padding: 8px 12px 8px 34px;
+  margin-right: auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/svg/location.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  }
+}
+
+.tours__days,
+.tours__nights {
+  position: relative;
+  padding-left: 32px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.tours__days::before {
+  background-image: url("../img/svg/sun-icon.svg");
+}
+
+.tours__nights {
+  margin-left: 14px;
+
+  &::before {
+    background-image: url("../img/svg/duration-icon.svg");
+  }
+}
+
+.tours__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tours__footer-title {
+  @include text(12px, 12px, $ff-light);
+  margin: 0 0 7px;
+}
+
+.tours__level .tours__footer-title {
+  margin: 0 0 4px;
+}
+
+.tours__date span,
+.tours__group span {
+  @include text(13px, 13px, $ff-bold);
+  display: block;
+  margin: 0;
+}
+
+.tours__stars {
+  display: flex;
+  gap: 1px;
+}
+
+.tours__level span {
+  display: flex;
+}
+
+.tours__level svg {
+  line-height: 0;
+}
+
+.tours .swiper {
+  margin-bottom: 53px;
+}
+
+.tours__button {
+  @include text(16px, 16px, $ff-bold);
+
+  color: $color-dark;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  padding: 10px 28px 10px 10px;
+  background-color: $color-transparent;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 9px;
+    height: 14px;
+    background-image: url("../img/svg/small-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+  }
+}
+
+.tours__navigation {
+  position: absolute;
+  top: 120px;
+  right: 120px;
+  display: flex;
+  gap: 4px;
+}
+
+.tours__navigation-button {
+  width: 37px;
+  height: 35px;
+  color: $color-default-white;
+  border: 1px solid $color-accent;
+  background-color: $color-accent;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border-color: $color-accent-dark;
+  }
+
+  &:active {
+    color: $color-default-white;
+    background-color: $color-accent-dark;
+    border-color: $color-accent-dark;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: $color-grey;
+    border-color: $color-grey;
+  }
+}
+
+.tours__navigation-button:hover svg,
+.tours__navigation-button:focus svg {
+  color: $color-accent-dark;
+}

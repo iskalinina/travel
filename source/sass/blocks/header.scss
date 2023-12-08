@@ -1,11 +1,6 @@
 .header__hero {
   position: relative;
   margin: 0 auto;
-  max-width: 1440px;
-
-  //@include vp-1199 {
-  //  min-height: 1024px;
-  //}
 
   @include vp-767 {
     min-height: 568px;
@@ -85,6 +80,10 @@
   @include text(16px, 16px);
 
   color: $color-default-white;
+  outline: 1px solid rgba($color-default-white, 0);
+  outline-offset: 2px;
+  position: relative;
+  transition: $trans-default;
 
   @include vp-1199 {
     font-weight: $ff-bold;
@@ -97,6 +96,43 @@
     @include text(14px, 14px, $ff-bold);
     letter-spacing: 0.56px;
   }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color-default-white, 0);
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:hover::before {
+    background-color: rgba($color-default-white, 1);
+  }
+
+  &:active::before {
+    background-color: rgba($color-default-white, 0);
+  }
+
+  &:focus {
+    outline: 1px solid rgba($color-default-white, 1);
+  }
+}
+
+.header__nav.is-open .header__menu-item a {
+  &:hover::before {
+    background-color: rgba($color-dark, 1);
+  }
+
+  &:active::before {
+    background-color: rgba($color-dark, 0);
+  }
+
+  &:focus {
+    outline: 1px solid rgba($color-dark, 1);
+  }
 }
 
 .header__phone {
@@ -107,7 +143,7 @@
 
   &:hover,
   &:focus {
-    color: #1c3374;
+    color: $color-accent-dark;
   }
 
   &:active {
@@ -127,7 +163,25 @@
 }
 
 .header__phone.is-disabled {
-  color: rgba($color-default-white, 0.2);
+  color: $color-default-white;
+  pointer-events: none;
+}
+
+.header__nav.is-open .header__phone {
+  color: $color-dark;
+
+  &:hover,
+  &:focus {
+    color: $color-accent-dark;
+  }
+
+  &:active {
+    color: $color-accent;
+  }
+}
+
+.header__nav.is-open .header__phone.is-disabled {
+  color: $color-accent;
 }
 
 .header__toggle-button {
@@ -167,6 +221,4 @@
   color: $color-dark;
 }
 
-.header__nav.is-open .header__phone {
-  color: $color-dark;
-}
+
