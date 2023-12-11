@@ -550,18 +550,212 @@
             </ul>
           </div>
           <div class="tours__navigation">
-            <button class="tours__navigation-button tours__navigation-button--prev" data-button="tours-prev" type="button" aria-label="Предыдущий слайд">
+            <button class="tours__navigation-button tours__navigation-button--prev btn btn--slider-navigation" data-button="tours-prev" type="button" aria-label="Предыдущий слайд">
               <svg width="16" height="16" viewBox="0 0 16 16" role="img">
                 <use href="img/sprite.svg#big-arrow"></use>
               </svg>
             </button>
-            <button class="tours__navigation-button tours__navigation-button--next" data-button="tours-next" type="button" aria-label="Следующий слайд">
+            <button class="tours__navigation-button tours__navigation-button--next btn btn--slider-navigation" data-button="tours-next" type="button" aria-label="Следующий слайд">
               <svg width="16" height="16" viewBox="0 0 16 16" role="img">
                 <use href="img/sprite.svg#big-arrow"></use>
               </svg>
             </button>
           </div>
           <button class="tours__button btn" type="button">Показать все&nbsp;туры</button>
+        </section>
+        <section class="training" data-test="training">
+          <div class="container">
+            <h2 class="training__heading" data-heading="Обучение">Обучение</h2>
+            <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и&nbsp;других.</p>
+            <div class="training__slider-header">
+              <h3>Наши инструкторы</h3>
+              <div class="training__navigation">
+                <button class="training__navigation-button training__navigation-button--prev btn btn--slider-navigation" data-button="trainings-prev" type="button" aria-label="Предыдущий слайд">
+                  <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                    <use href="img/sprite.svg#big-arrow"></use>
+                  </svg>
+                </button>
+                <button class="training__navigation-button training__navigation-button--next btn btn--slider-navigation" data-button="trainings-next" type="button" aria-label="Следующий слайд">
+                  <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                    <use href="img/sprite.svg#big-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="swiper" data-slider="trainings">
+              <ul class="training__list swiper-wrapper">
+                <li class="training__item swiper-slide">
+                  <div class="training__photo">
+                    <picture>
+                      <source type="image/webp" srcset="./img/content/alexandr_desktop1x.webp 1x, ./img/content/alexandr_desktop2x.webp 2x" width="255" height="200">
+                      <img src="./img/content/alexandr_desktop1x.png" srcset="./img/content/alexandr_desktop2x.png 2x" width="255" height="200" alt="Александр Прокофьев.">
+                    </picture>
+                  </div>
+                  <div class="training__title">
+                    <h4>Александр<br>Прокофьев</h4>
+                    <a class="training__link" href="#">
+                      <svg width="14" height="8" viewBox="0 0 14 8" role="img">
+                        <use href="img/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p>Строгий и&nbsp;внимательный инструктор, весёлый и&nbsp;общительный человек. Любит природу.</p>
+                </li>
+                <li class="training__item swiper-slide">
+                  <div class="training__photo">
+                    <picture>
+                      <source type="image/webp" srcset="./img/content/svetlana_desktop1x.webp 1x, ./img/content/svetlana_desktop2x.webp 2x" width="255" height="200">
+                      <img src="./img/content/svetlana_desktop1x.png" srcset="./img/content/svetlana_desktop2x.png 2x" width="255" height="200" alt="Светлана Афиногенова.">
+                    </picture>
+                  </div>
+                  <div class="training__title">
+                    <h4>Светлана<br>Афиногенова</h4>
+                    <a class="training__link" href="#">
+                      <svg width="14" height="8" viewBox="0 0 14 8" role="img">
+                        <use href="img/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p>Видеть мир&nbsp;вокруг, познавать его&nbsp;опасности, находить друг друга, становиться ближе, чувствовать&nbsp;— в&nbsp;этом назначение жизни.</p>
+                </li>
+                <li class="training__item swiper-slide">
+                  <div class="training__photo">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/nadezhda_mobile1x.webp 1x, ./img/content/nadezhda_mobile2x.webp 2x" width="290" height="200">
+                      <source type="image/webp" srcset="./img/content/nadezhda_desktop1x.webp 1x, ./img/content/nadezhda_desktop2x.webp 2x" width="255" height="200">
+                      <source type="image/png" media="(max-width: 767px)" srcset="./img/content/nadezhda_mobile1x.png 1x, ./img/content/nadezhda_mobile2x.png 2x" width="290" height="200">
+                      <img src="./img/content/nadezhda_desktop1x.png" srcset="./img/content/nadezhda_desktop2x.png 2x" width="255" height="200" alt="Надежда Колесниченко.">
+                    </picture>
+                  </div>
+                  <div class="training__title">
+                    <h4>Надежда<br>Колесниченко</h4>
+                    <a class="training__link" href="#">
+                      <svg width="14" height="8" viewBox="0 0 14 8" role="img">
+                        <use href="img/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p>Участники говорят, что&nbsp;Надежда ответственная, приятная в&nbsp;общении, и&nbsp;в&nbsp;поездках с&nbsp;ней&nbsp;чувствуешь себя спокойно и&nbsp;уверенно.</p>
+                </li>
+                <li class="training__item swiper-slide">
+                  <div class="training__photo">
+                    <picture>
+                      <source type="image/webp" srcset="./img/content/fedor_desktop1x.webp 1x, ./img/content/fedor_desktop2x.webp 2x" width="255" height="200">
+                      <img src="./img/content/fedor_desktop1x.png" srcset="./img/content/fedor_desktop2x.png 2x" width="255" height="200" alt="Федор Кайгородов.">
+                    </picture>
+                  </div>
+                  <div class="training__title">
+                    <h4>Федор<br>Кайгородов</h4>
+                    <a class="training__link" href="#">
+                      <svg width="14" height="8" viewBox="0 0 14 8" role="img">
+                        <use href="img/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p>Опыт походов: Ходит в&nbsp;походы с&nbsp;2001&nbsp;года. В&nbsp;России побывал в&nbsp;горных районах Хибины, Архыз, много путешествует по&nbsp;Европе.</p>
+                </li>
+                <li class="training__item swiper-slide">
+                  <div class="training__photo">
+                    <picture>
+                      <source type="image/webp" srcset="./img/content/alexandr_desktop1x.webp 1x, ./img/content/alexandr_desktop2x.webp 2x" width="255" height="200">
+                      <img src="./img/content/alexandr_desktop1x.png" srcset="./img/content/alexandr_desktop2x.png 2x" width="255" height="200" alt="Константин Константинопольский.">
+                    </picture>
+                  </div>
+                  <div class="training__title">
+                    <h4>Константин<br>Константинопольский</h4>
+                    <a class="training__link" href="#">
+                      <svg width="14" height="8" viewBox="0 0 14 8" role="img">
+                        <use href="img/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p>Строгий и&nbsp;внимательный инструктор.</p>
+                </li>
+              </ul>
+            </div>
+            <h3>Процесс обучения</h3>
+          </div>
+          <ul class="training__path">
+            <li class="training__path-item training__path-item--learning">
+              <svg width="25" height="25" viewBox="0 0 25 25" role="img">
+                <use href="img/sprite.svg#map"></use>
+              </svg>
+              <p>Изучение спортивного туристского движения</p>
+            </li>
+            <li class="training__path-item training__path-item--equipment">
+              <svg width="25" height="25" viewBox="0 0 25 25" role="img">
+                <use href="img/sprite.svg#boots"></use>
+              </svg>
+              <p>Подготовка и&nbsp;техническое снаряжение в&nbsp;походах</p>
+            </li>
+            <li class="training__path-item training__path-item--mountain">
+              <svg width="25" height="25" viewBox="0 0 25 25" role="img">
+                <use href="img/sprite.svg#mountain"></use>
+              </svg>
+              <p>Разъяснение сложности горных препятствий</p>
+            </li>
+            <li class="training__path-item training__path-item--lections">
+              <svg width="25" height="25" viewBox="0 0 25 25" role="img">
+                <use href="img/sprite.svg#pine-tree"></use>
+              </svg>
+              <p>Лекции по&nbsp;окружающей среде, экологии и&nbsp;гигиене</p>
+            </li>
+          </ul>
+        </section>
+        <section class="about" data-test="about">
+          <div class="about__background">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/about_mobile1x.webp 1x, ./img/content/about_mobile2x.webp 2x" width="434" height="400">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="./img/content/about_tablet1x.webp 1x, ./img/content/about_tablet2x.webp 2x" width="542" height="350">
+              <source type="image/webp" srcset="./img/content/about_desktop1x.webp 1x, ./img/content/about_desktop2x.webp 2x" width="808" height="474">
+              <source type="image/png" media="(max-width: 767px)" srcset="img/content/about_mobile1x.png 1x, img/content/about_mobile2x.png 2x" width="434" height="400">
+              <source type="image/png" media="(max-width: 1199px)" srcset="img/content/about_tablet1x.png 1x, img/content/about_tablet2x.png 2x" width="542" height="350">
+              <img src="./img/content/about_desktop1x.png" srcset="./img/content/about_desktop2x.png 2x" width="808" height="474" alt="">
+            </picture>
+          </div>
+          <div class="about__description">
+            <h2 class="about__heading" data-heading="О нас">О&nbsp;нас</h2>
+            <div class="about__description-item">
+              <h3>История компании</h3>
+              <p>В&nbsp;далёком 2000&nbsp;году мы&nbsp;начали заниматься туризмом&nbsp;— походы, поездки, восхождения, нам&nbsp;это&nbsp;настолько понравилось, что&nbsp;мы&nbsp;этим стали жить. <br class="about__br">Спустя 5&nbsp;лет, в&nbsp;2005&nbsp;году мы&nbsp;основали компанию, чтобы&nbsp;показывать людям удивительные места нашей страны.</p>
+            </div>
+            <div class="about__description-item">
+              <h3>Наша цель</h3>
+              <p>Подарить вам&nbsp;незабываемые впечатления от&nbsp;похода в&nbsp;горы. Мы&nbsp;берём на&nbsp;себя все&nbsp;организационные вопросы. При&nbsp;организации мы&nbsp;обязательно учтём все&nbsp;ваши пожелания. Вам&nbsp;останется только наслаждаться незабываемым приключением в&nbsp;приятной компании.</p>
+            </div>
+          </div>
+        </section>
+        <section class="reviews" data-test="reviews">
+          <h2 class="reviews__heading" data-heading="О нас">Отзывы</h2>
+          <div class="reviews__navigation">
+            <button class="reviews__navigation-button reviews__navigation-button--prev btn btn--slider-navigation" data-button="reviews-prev" type="button" aria-label="Предыдущий слайд">
+              <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                <use href="img/sprite.svg#big-arrow"></use>
+              </svg>
+            </button>
+            <button class="reviews__navigation-button reviews__navigation-button--next btn btn--slider-navigation" data-button="treviews-next" type="button" aria-label="Следующий слайд">
+              <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                <use href="img/sprite.svg#big-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="swiper" data-slider="reviews">
+            <ul class="reviews__list swiper-wrapper">
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__photo">
+                  <picture>
+                    <source type="image/webp" srcset="./img/content/alexandr_desktop1x.webp 1x, ./img/content/alexandr_desktop2x.webp 2x" width="255" height="200">
+                    <img src="./img/content/alexandr_desktop1x.png" srcset="./img/content/alexandr_desktop2x.png 2x" width="255" height="200" alt="Александр Прокофьев.">
+                  </picture>
+                </div>
+                <div class="reviews__text">
+                  <p></p>
+                  <p></p>
+
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
       <footer>

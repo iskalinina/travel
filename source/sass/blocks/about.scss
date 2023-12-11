@@ -1,0 +1,143 @@
+.about {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 120px;
+  position: relative;
+  margin-bottom: 128px;
+
+  @include vp-1199 {
+    padding-right: 45px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    flex-direction: column;
+  }
+}
+
+.about__background {
+  background-color: $color-grey;
+  max-width: 808px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  @include vp-1199 {
+    max-width: 542px;
+    top: 42px;
+  }
+
+  @include vp-767 {
+    position: static;
+    margin-bottom: 6px;
+  }
+}
+
+.about__background img {
+  height: 100%;
+}
+
+.about__description {
+  padding-top: 23px;
+  max-width: 50%;
+
+  @include vp-1199 {
+    padding-top: 0;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+}
+
+.about__heading {
+  @include  text(35px, 35px, $ff-extrabold);
+
+  color: $color-dark;
+  margin: 0 0 56px;
+  position: relative;
+
+  &::before {
+    @include text(55px, 55pxx, $ff-extrabold);
+
+    content: attr(data-heading);
+    opacity: 0.03;
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    z-index: -1;
+
+    @include vp-1199 {
+      @include text(40px, 40pxx, $ff-extrabold);
+
+      left: 6px;
+      bottom: 6px;
+    }
+  }
+
+  @include vp-1199 {
+    @include  text(25px, 25px, $ff-extrabold);
+
+    padding-left: 6px;
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    @include  text(22px, 22px, $ff-extrabold);
+
+    padding-left: 0;
+    margin-bottom: 26px;
+  }
+}
+
+.about__description-item:not(:last-child) {
+  margin-bottom: 29px;
+
+  @include vp-767 {
+    margin-bottom: 27px;
+  }
+}
+
+.about__description-item h3 {
+  @include text(21px, 21px, $ff-bold);
+
+  margin: 0 0 16px;
+
+  @include vp-1199 {
+    @include text(18px, 18px, $ff-bold);
+
+    margin-bottom: 11px;
+  }
+
+  @include vp-767 {
+    @include text(16px, 16px, $ff-bold);
+
+    margin-bottom: 13px;
+  }
+}
+
+.about__description-item p {
+  @include text(14px, 22px);
+
+  margin: 0;
+  max-width: 585px;
+
+  @include vp-1199 {
+    max-width: 270px;
+  }
+
+  @include vp-767 {
+    @include text(14px, 20px);
+
+    max-width: 100%;
+  }
+}
+
+.about__br {
+  @include vp-1199 {
+    display: none;
+  }
+}

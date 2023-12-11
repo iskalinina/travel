@@ -6,7 +6,6 @@
   transition: all $trans-default;
 
   &:disabled {
-    opacity: 0.5;
     pointer-events: none;
   }
 
@@ -41,6 +40,35 @@
       pointer-events: none;
     }
   }
+
+  &--slider-navigation {
+    width: 37px;
+    height: 35px;
+    color: $color-default-white;
+    border: 1px solid $color-accent;
+    background-color: $color-accent;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: $color-accent-dark;
+    }
+
+    &:active {
+      color: $color-default-white;
+      background-color: $color-accent-dark;
+      border-color: $color-accent-dark;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      background-color: $color-grey;
+      border-color: $color-grey;
+    }
+  }
 }
 
 .btn--primary.is-disable {
@@ -48,4 +76,9 @@
   background-color: $color-grey;
   border-color: $color-grey;
   pointer-events: none;
+}
+
+.btn--slider-navigation:hover svg,
+.btn--slider-navigation:focus svg {
+  color: $color-accent-dark;
 }

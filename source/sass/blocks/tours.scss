@@ -1,13 +1,16 @@
 .tours {
   position: relative;
   padding-top: 123px;
+  margin-bottom: 143px;
 
   @include vp-1199 {
     padding-top: 68px;
+    margin-bottom: 107px;
   }
 
   @include vp-767 {
     padding-top: 54px;
+    margin-bottom: 46px;
   }
 }
 
@@ -245,35 +248,9 @@
 }
 
 .tours__navigation-button {
-  width: 37px;
-  height: 35px;
-  color: $color-default-white;
-  border: 1px solid $color-accent;
-  background-color: $color-accent;
-  justify-content: center;
-  display: flex;
-  align-items: center;
 
   &--next {
     transform: rotate(180deg);
-  }
-
-  &:hover,
-  &:focus {
-    background-color: transparent;
-    border-color: $color-accent-dark;
-  }
-
-  &:active {
-    color: $color-default-white;
-    background-color: $color-accent-dark;
-    border-color: $color-accent-dark;
-  }
-
-  &:disabled {
-    pointer-events: none;
-    background-color: $color-grey;
-    border-color: $color-grey;
   }
 }
 
