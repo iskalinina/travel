@@ -725,15 +725,15 @@
             </div>
           </div>
         </section>
-        <section class="reviews" data-test="reviews">
-          <h2 class="reviews__heading" data-heading="О нас">Отзывы</h2>
+        <section class="reviews container" data-test="reviews">
+          <h2 class="reviews__heading" data-heading="Отзывы">Отзывы</h2>
           <div class="reviews__navigation">
             <button class="reviews__navigation-button reviews__navigation-button--prev btn btn--slider-navigation" data-button="reviews-prev" type="button" aria-label="Предыдущий слайд">
               <svg width="16" height="16" viewBox="0 0 16 16" role="img">
                 <use href="img/sprite.svg#big-arrow"></use>
               </svg>
             </button>
-            <button class="reviews__navigation-button reviews__navigation-button--next btn btn--slider-navigation" data-button="treviews-next" type="button" aria-label="Следующий слайд">
+            <button class="reviews__navigation-button reviews__navigation-button--next btn btn--slider-navigation" data-button="reviews-next" type="button" aria-label="Следующий слайд">
               <svg width="16" height="16" viewBox="0 0 16 16" role="img">
                 <use href="img/sprite.svg#big-arrow"></use>
               </svg>
@@ -744,18 +744,137 @@
               <li class="reviews__item swiper-slide">
                 <div class="reviews__photo">
                   <picture>
-                    <source type="image/webp" srcset="./img/content/alexandr_desktop1x.webp 1x, ./img/content/alexandr_desktop2x.webp 2x" width="255" height="200">
-                    <img src="./img/content/alexandr_desktop1x.png" srcset="./img/content/alexandr_desktop2x.png 2x" width="255" height="200" alt="Александр Прокофьев.">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/reviews1_mobile1x.webp 1x, ./img/content/reviews1_mobile2x.webp 2x" width="250" height="169">
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/content/reviews1_tablet1x.webp 1x, ./img/content/reviews1_tablet2x.webp 2x" width="186" height="237">
+                    <source type="image/webp" srcset="./img/content/reviews1_desktop1x.webp 1x, ./img/content/reviews1_desktop2x.webp 2x" width="258" height="253">
+                    <source type="image/png" media="(max-width: 767px)" srcset="img/content/reviews1_mobile1x.png 1x, img/content/reviews1_mobile2x.png 2x" width="250" height="169">
+                    <source type="image/png" media="(max-width: 1199px)" srcset="img/content/reviews1_tablet1x.png 1x, img/content/reviews1_tablet2x.png 2x" width="186" height="237">
+                    <img src="./img/content/reviews1_desktop1x.png" srcset="./img/content/reviews1_desktop2x.png 2x" width="258" height="253" alt="Отзыв № 1.">
                   </picture>
                 </div>
                 <div class="reviews__text">
-                  <p></p>
-                  <p></p>
-
+                  <p>Осенью ходили в&nbsp;поход на&nbsp;Алтай с&nbsp;друзьями. Впечатления потрясающие! Инструкторы&nbsp;— настоящие эксперты&nbsp;— всему научили, все&nbsp;показали. Делились увлекательными историями о&nbsp;местах, людях, культуре места.</p>
+                  <p>С&nbsp;уверенностью могу сказать, что&nbsp;жизнь разделилась на&nbsp;до&nbsp;этого и&nbsp;после. Ещё&nbsp;никогда не&nbsp;отдыхал так&nbsp;душой и&nbsp;телом. Всем очень рекомендую!</p>
+                  <div class="reviews__author">
+                    <p>Фролов Александр</p>
+                  </div>
+                  <div class="reviews__info">
+                    <p>38&nbsp;лет, Москва</p>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/reviews2_mobile1x.webp 1x, ./img/content/reviews2_mobile2x.webp 2x" width="250" height="169">
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/content/reviews2_tablet1x.webp 1x, ./img/content/reviews2_tablet2x.webp 2x" width="186" height="237">
+                    <source type="image/webp" srcset="./img/content/reviews2_desktop1x.webp 1x, ./img/content/reviews2_desktop2x.webp 2x" width="258" height="253">
+                    <source type="image/png" media="(max-width: 767px)" srcset="img/content/reviews2_mobile1x.png 1x, img/content/reviews2_mobile2x.png 2x" width="250" height="169">
+                    <source type="image/png" media="(max-width: 1199px)" srcset="img/content/reviews2_tablet1x.png 1x, img/content/reviews2_tablet2x.png 2x" width="186" height="237">
+                    <img src="./img/content/reviews2_desktop1x.png" srcset="./img/content/reviews2_desktop2x.png 2x" width="258" height="253" alt="Отзыв № 2.">
+                  </picture>
+                </div>
+                <div class="reviews__text">
+                  <p>Хороший полноценный поход с&nbsp;разнообразными локациями. В начале дорога идет по лыжне, далее прошли мимо полигона, по болотам, у озер и лесных ручьев, остатков дач конца 19 века. Было очень интересно!</p>
+                  <p>Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам. Всем советую этот тур.</p>
+                  <div class="reviews__author">
+                    <p>Иван Соловьев</p>
+                  </div>
+                  <div class="reviews__info">
+                    <p>25 лет, Владивосток</p>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/reviews3_mobile1x.webp 1x, ./img/content/reviews3_mobile2x.webp 2x" width="250" height="169">
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/content/reviews3_tablet1x.webp 1x, ./img/content/reviews3_tablet2x.webp 2x" width="186" height="237">
+                    <source type="image/webp" srcset="./img/content/reviews3_desktop1x.webp 1x, ./img/content/reviews3_desktop2x.webp 2x" width="258" height="253">
+                    <source type="image/png" media="(max-width: 767px)" srcset="img/content/reviews3_mobile1x.png 1x, img/content/reviews3_mobile2x.png 2x" width="250" height="169">
+                    <source type="image/png" media="(max-width: 1199px)" srcset="img/content/reviews3_tablet1x.png 1x, img/content/reviews3_tablet2x.png 2x" width="186" height="237">
+                    <img src="./img/content/reviews3_desktop1x.png" srcset="./img/content/reviews3_desktop2x.png 2x" width="258" height="253" alt="Отзыв № 3.">
+                  </picture>
+                </div>
+                <div class="reviews__text">
+                  <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошел легче, чем ожидала, видимо организм уже привык.</p>
+                  <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была  рада быть в такой компании.</p>
+                  <div class="reviews__author">
+                    <p>Евгения Баженова</p>
+                  </div>
+                  <div class="reviews__info">
+                    <p>23 года, Кострома</p>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/reviews4_mobile1x.webp 1x, ./img/content/reviews4_mobile2x.webp 2x" width="250" height="169">
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/content/reviews4_tablet1x.webp 1x, ./img/content/reviews4_tablet2x.webp 2x" width="186" height="237">
+                    <source type="image/webp" srcset="./img/content/reviews4_desktop1x.webp 1x, ./img/content/reviews4_desktop2x.webp 2x" width="258" height="253">
+                    <source type="image/png" media="(max-width: 767px)" srcset="img/content/reviews4_mobile1x.png 1x, img/content/reviews4_mobile2x.png 2x" width="250" height="169">
+                    <source type="image/png" media="(max-width: 1199px)" srcset="img/content/reviews4_tablet1x.png 1x, img/content/reviews4_tablet2x.png 2x" width="186" height="237">
+                    <img src="./img/content/reviews4_desktop1x.png" srcset="./img/content/reviews4_desktop2x.png 2x" width="258" height="253" alt="Отзыв № 4.">
+                  </picture>
+                </div>
+                <div class="reviews__text">
+                  <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец-то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
+                  <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
+                  <div class="reviews__author">
+                    <p>Елена Пирогова</p>
+                  </div>
+                  <div class="reviews__info">
+                    <p>37 лет, Тюмень</p>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
+        </section>
+        <section class="advantages container" data-test="adv">
+          <h2 class="advantages__heading" data-heading="Преимущества">Преимущества</h2>
+          <div class="advantages__navigation">
+            <button class="advantages__navigation-button advantages__navigation-button--prev btn btn--slider-navigation" data-button="advantages-prev" type="button" aria-label="Предыдущий слайд">
+              <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                <use href="img/sprite.svg#big-arrow"></use>
+              </svg>
+            </button>
+            <button class="advantages__navigation-button advantages__navigation-button--next btn btn--slider-navigation" data-button="advantages-next" type="button" aria-label="Следующий слайд">
+              <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                <use href="img/sprite.svg#big-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="swiper" data-slider="advantages">
+            <ul class="advantages__list swiper-wrapper">
+              <li class="advantages__item swiper-slide">
+                <div class="reviews__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/reviews1_mobile1x.webp 1x, ./img/content/reviews1_mobile2x.webp 2x" width="250" height="169">
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/content/reviews1_tablet1x.webp 1x, ./img/content/reviews1_tablet2x.webp 2x" width="186" height="237">
+                    <source type="image/webp" srcset="./img/content/reviews1_desktop1x.webp 1x, ./img/content/reviews1_desktop2x.webp 2x" width="258" height="253">
+                    <source type="image/png" media="(max-width: 767px)" srcset="img/content/reviews1_mobile1x.png 1x, img/content/reviews1_mobile2x.png 2x" width="250" height="169">
+                    <source type="image/png" media="(max-width: 1199px)" srcset="img/content/reviews1_tablet1x.png 1x, img/content/reviews1_tablet2x.png 2x" width="186" height="237">
+                    <img src="./img/content/reviews1_desktop1x.png" srcset="./img/content/reviews1_desktop2x.png 2x" width="258" height="253" alt="Отзыв № 1.">
+                  </picture>
+                </div>
+                <div class="reviews__text">
+                  <p>Осенью ходили в&nbsp;поход на&nbsp;Алтай с&nbsp;друзьями. Впечатления потрясающие! Инструкторы&nbsp;— настоящие эксперты&nbsp;— всему научили, все&nbsp;показали. Делились увлекательными историями о&nbsp;местах, людях, культуре места.</p>
+                  <p>С&nbsp;уверенностью могу сказать, что&nbsp;жизнь разделилась на&nbsp;до&nbsp;этого и&nbsp;после. Ещё&nbsp;никогда не&nbsp;отдыхал так&nbsp;душой и&nbsp;телом. Всем очень рекомендую!</p>
+                  <div class="reviews__author">
+                    <p>Фролов Александр</p>
+                  </div>
+                  <div class="reviews__info">
+                    <p>38&nbsp;лет, Москва</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="gallery" data-test="gallery">
+          <h2 class="gallery__heading" data-heading="Фотогалерея">Фотогалерея</h2>
         </section>
       </main>
       <footer>

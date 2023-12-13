@@ -3,14 +3,16 @@
   justify-content: flex-end;
   padding-right: 120px;
   position: relative;
-  margin-bottom: 128px;
+  margin-bottom: 134px;
 
   @include vp-1199 {
     padding-right: 45px;
+    margin-bottom: 57px;
   }
 
   @include vp-767 {
     padding: 0;
+    margin-bottom: 41px;
     flex-direction: column;
   }
 }

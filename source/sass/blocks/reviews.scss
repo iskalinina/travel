@@ -1,0 +1,143 @@
+.reviews {
+  position: relative;
+}
+
+.reviews .swiper {
+  padding: 10px;
+
+  @include vp-1199 {
+    padding: 20px 0;
+  }
+}
+
+.reviews__heading {
+  @include text(35px, 35px, $ff-extrabold);
+
+  color: $color-dark;
+  margin: 0 0 27px;
+  position: relative;
+
+  &::before {
+    @include text(55px, 55pxx, $ff-extrabold);
+
+    content: attr(data-heading);
+    opacity: 0.03;
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    z-index: -1;
+
+    @include vp-1199 {
+      @include text(40px, 40pxx, $ff-extrabold);
+    }
+  }
+
+  @include vp-1199 {
+    @include text(25px, 25px, $ff-extrabold);
+
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    @include text(22px, 22px, $ff-extrabold);
+
+    margin-bottom: 36px;
+  }
+}
+
+.reviews__navigation {
+  position: absolute;
+  top: -13px;
+  right: 120px;
+  display: flex;
+  gap: 4px;
+
+  @include vp-1199 {
+    top: -11px;
+    right: 45px;
+  }
+
+  @include vp-767 {
+    top: -9px;
+    right: 15px;
+  }
+}
+
+.reviews__navigation-button {
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+.reviews__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reviews__item {
+  box-shadow: 0 0 20px 0 rgba($color-accent-dark, 0.10);
+  padding: 20px 40px 20px 20px;
+  border: 0 solid $color-default-white;
+  min-height: 293px;
+  max-width: 700px;
+  display: flex;
+  gap: 30px;
+
+  @include vp-1199 {
+    max-width: 565px;
+    min-height: 277px;
+    padding: 20px 30px 20px 20px;
+  }
+}
+
+.reviews__photo {
+  background-color: $color-grey;
+  flex-shrink: 0;
+}
+
+.reviews__photo img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.reviews__text {
+  @include vp-1199 {
+    padding-top: 3px;
+  }
+}
+
+.reviews__text > p {
+  @include text(14px, 22px);
+
+  margin: 0;
+
+  @include vp-1199 {
+    @include text(12px, 18px);
+  }
+}
+
+.reviews__text > p:not(:last-child) {
+  @include vp-1199 {
+    margin-bottom: 10px;
+  }
+}
+
+.reviews__text > p:last-of-type {
+  margin-bottom: 12px;
+
+  @include vp-1199 {
+    margin-bottom: 26px;
+  }
+}
+
+.reviews__author p {
+  @include text(13px, 13px, $ff-bold);
+  margin: 0 0 8px;
+}
+
+.reviews__info p {
+  @include text(12px, 12px, $ff-light);
+  margin: 0;
+}

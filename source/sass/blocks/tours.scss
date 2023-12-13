@@ -50,20 +50,11 @@
 }
 
 .tours__item {
-  width: calc((100% - 60px) / 3);
   min-height: 416px;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
-  @include vp-1199 {
-    width: calc((100% - 18px) / 2);
-  }
-
-  @include vp-1199 {
-    width: 100%;
-  }
 }
 
 .tours__item-background {

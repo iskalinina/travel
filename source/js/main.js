@@ -3,6 +3,7 @@ import {Form} from './modules/form-validate/form';
 import {initSliderHero} from './modules/sliders/slider-hero';
 import {initSliderTours} from './modules/sliders/slider-tours';
 import {initSliderTrainings} from './modules/sliders/slider-trainings';
+import {initSliderReviews} from './modules/sliders/slider-reviews';
 import {setupVideo} from './modules/video/init-video';
 import './modules/menu/toggler.js';
 
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderHero();
   initSliderTours();
   initSliderTrainings();
+  initSliderReviews();
   setupVideo();
 
   // Modules

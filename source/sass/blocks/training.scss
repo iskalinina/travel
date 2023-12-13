@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 19px;
+    margin-bottom: 21px;
   }
 }
 
@@ -120,17 +120,14 @@
 
 .training__item {
   padding: 14px;
-  max-width: calc((100% - 60px) / 4);
   min-height: 356px;
   border: 1px solid rgba($color-accent, 0.1);
 
   @include vp-1199 {
-    max-width: calc((100% - 40px) / 3);
     min-height: 388px;
   }
 
   @include vp-767 {
-    max-width: 100%;
     min-height: 356px;
   }
 }
