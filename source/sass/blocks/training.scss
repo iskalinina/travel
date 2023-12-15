@@ -121,6 +121,7 @@
 .training__item {
   padding: 14px;
   min-height: 356px;
+  height: auto;
   border: 1px solid rgba($color-accent, 0.1);
 
   @include vp-1199 {
@@ -211,6 +212,7 @@
   }
 
   @include vp-767 {
+    flex-direction: column;
     max-width: 631px;
     padding-left: 15px;
     gap: 25px 0;

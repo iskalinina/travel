@@ -4,6 +4,7 @@ import {initSliderHero} from './modules/sliders/slider-hero';
 import {initSliderTours} from './modules/sliders/slider-tours';
 import {initSliderTrainings} from './modules/sliders/slider-trainings';
 import {initSliderReviews} from './modules/sliders/slider-reviews';
+import {initSliderAdv} from './modules/sliders/slider-advantages';
 import {setupVideo} from './modules/video/init-video';
 import './modules/menu/toggler.js';
 
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderTours();
   initSliderTrainings();
   initSliderReviews();
+  initSliderAdv();
   setupVideo();
 
   // Modules

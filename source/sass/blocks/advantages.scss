@@ -1,0 +1,82 @@
+.advantages .swiper {
+  margin-bottom: 50px;
+}
+
+.advantages__heading {
+  @include text(35px, 35px, $ff-extrabold);
+
+  color: $color-dark;
+  margin: 0 auto 47px;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    @include text(55px, 55pxx, $ff-extrabold);
+
+    content: attr(data-heading);
+    opacity: 0.03;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    @include vp-1199 {
+      @include text(40px, 40pxx, $ff-extrabold);
+    }
+  }
+}
+
+.advantages__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages__item {
+  max-width: 380px;
+  height: auto;
+  padding: 39px 19px;
+  border: 1px solid rgba($color-grey, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__icon {
+  width: 54px;
+  height: 54px;
+  border: 1px solid $color-accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.advantages__title h3 {
+  @include text(18px, 18px, $ff-semibold);
+
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.advantages__text p {
+  @include text(14x, 22px);
+
+  margin: 0;
+  text-align: center;
+}
+.advantages__navigation {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.advantages__navigation-button {
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+

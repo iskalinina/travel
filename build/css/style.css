@@ -3207,6 +3207,7 @@ button,
 .training__item {
   padding: 14px;
   min-height: 356px;
+  height: auto;
   border: 1px solid rgba(2, 102, 193, 0.1);
 }
 @media (max-width: 1199px) {
@@ -3328,6 +3329,10 @@ button,
 }
 @media (max-width: 767px) {
   .training__path {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 631px;
     padding-left: 15px;
     gap: 25px 0;
@@ -3724,6 +3729,17 @@ button,
 
 .reviews {
   position: relative;
+  margin-bottom: 65px;
+}
+@media (max-width: 1199px) {
+  .reviews {
+    margin-bottom: 64px;
+  }
+}
+@media (max-width: 767px) {
+  .reviews {
+    margin-bottom: 40px;
+  }
 }
 
 .reviews .swiper {
@@ -3732,6 +3748,11 @@ button,
 @media (max-width: 1199px) {
   .reviews .swiper {
     padding: 20px 0;
+  }
+}
+@media (max-width: 767px) {
+  .reviews .swiper {
+    padding: 0;
   }
 }
 
@@ -3774,7 +3795,7 @@ button,
     font-size: 22px;
     line-height: 22px;
     font-weight: 800;
-    margin-bottom: 36px;
+    margin-bottom: 18px;
   }
 }
 
@@ -3831,6 +3852,18 @@ button,
     padding: 20px 30px 20px 20px;
   }
 }
+@media (max-width: 767px) {
+  .reviews__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    min-height: 466px;
+    max-width: 100%;
+    gap: 16px;
+  }
+}
 
 .reviews__photo {
   background-color: #999999;
@@ -3878,6 +3911,11 @@ button,
     margin-bottom: 26px;
   }
 }
+@media (max-width: 767px) {
+  .reviews__text > p:last-of-type {
+    margin-bottom: 16px;
+  }
+}
 
 .reviews__author p {
   font-size: 13px;
@@ -3885,12 +3923,126 @@ button,
   font-weight: 700;
   margin: 0 0 8px;
 }
+@media (max-width: 767px) {
+  .reviews__author p {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+  }
+}
 
 .reviews__info p {
   font-size: 12px;
   line-height: 12px;
   font-weight: 300;
   margin: 0;
+}
+
+.advantages .swiper {
+  margin-bottom: 50px;
+}
+
+.advantages__heading {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 800;
+  color: #2d383f;
+  margin: 0 auto 47px;
+  text-align: center;
+  position: relative;
+}
+.advantages__heading::before {
+  font-size: 55px;
+  line-height: 55pxx;
+  font-weight: 800;
+  content: attr(data-heading);
+  opacity: 0.03;
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+}
+@media (max-width: 1199px) {
+  .advantages__heading::before {
+    font-size: 40px;
+    line-height: 40pxx;
+    font-weight: 800;
+  }
+}
+
+.advantages__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages__item {
+  max-width: 380px;
+  height: auto;
+  padding: 39px 19px;
+  border: 1px solid rgba(153, 153, 153, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advantages__icon {
+  width: 54px;
+  height: 54px;
+  border: 1px solid #0266c1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.advantages__title h3 {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.advantages__text p {
+  font-size: 14x;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.advantages__navigation {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+}
+
+.advantages__navigation-button--next {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 /* @mixin hover-focus {
