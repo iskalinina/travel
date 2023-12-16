@@ -4,8 +4,6 @@ const sliderAdv = document.querySelector('[data-slider="advantages"]');
 const buttonNext = document.querySelector('[data-button="advantages-next"]');
 const buttonPrev = document.querySelector('[data-button="advantages-prev"]');
 
-// const mobile = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
-// const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
 const desktop = window.matchMedia('(min-width: 1200px)');
 
 const initSliderAdv = () => {
@@ -25,6 +23,7 @@ const initSliderAdv = () => {
     });
   } else {
     swiper.destroy();
+    console.log('destroy');
   }
 };
 

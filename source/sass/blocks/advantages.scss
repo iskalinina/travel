@@ -1,5 +1,20 @@
+.advantages {
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
 .advantages .swiper {
   margin-bottom: 50px;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__heading {
@@ -11,7 +26,7 @@
   position: relative;
 
   &::before {
-    @include text(55px, 55pxx, $ff-extrabold);
+    @include text(55px, 55px, $ff-extrabold);
 
     content: attr(data-heading);
     opacity: 0.03;
@@ -21,9 +36,15 @@
     transform: translateX(-50%);
     z-index: -1;
 
-    @include vp-1199 {
-      @include text(40px, 40pxx, $ff-extrabold);
+    @include vp-767 {
+      @include text(26px, 26px, $ff-extrabold);
     }
+  }
+
+  @include vp-767 {
+    @include text(22px, 22px, $ff-extrabold);
+
+    margin-bottom: 20px;
   }
 }
 
@@ -31,6 +52,16 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @include vp-1199 {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    gap: 15px;
+  }
 }
 
 .advantages__item {
@@ -41,6 +72,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include vp-1199 {
+    max-width: calc((100% - 30px) / 2);
+    padding: 29px 19px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 19px 9px;
+  }
+}
+
+.advantages__item:last-child:nth-child(odd) {
+  max-width: 380px;
 }
 
 .advantages__icon {
@@ -51,6 +96,18 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+
+  @include vp-1199 {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+  }
 }
 
 .advantages__title h3 {
@@ -58,25 +115,50 @@
 
   margin: 0 0 15px;
   text-align: center;
+
+  @include vp-1199 {
+    @include text(16px, 16px, $ff-semibold);
+  }
+
+  @include vp-767 {
+    @include text(14px, 14px, $ff-semibold);
+  }
 }
 
 .advantages__text p {
-  @include text(14x, 22px);
+  @include text(14px, 22px);
 
   margin: 0;
   text-align: center;
+
+  @include vp-767 {
+    @include text(12px, 18px);
+  }
 }
+
 .advantages__navigation {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 4px;
+
+  @include vp-1199 {
+    display: none;
+  }
 }
 
 .advantages__navigation-button {
 
   &--next {
     transform: rotate(180deg);
+  }
+}
+
+.advantages__br {
+  display: none;
+
+  @include vp-1199 {
+    display: block;
   }
 }
 

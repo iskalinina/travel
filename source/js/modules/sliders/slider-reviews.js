@@ -10,7 +10,6 @@ const initSliderReviews = () => {
     new swiper(sliderReviews, {
 
       slidesPerView: 'auto',
-      centeredSlides: true,
       navigation: {
         nextEl: buttonNext,
         prevEl: buttonPrev,

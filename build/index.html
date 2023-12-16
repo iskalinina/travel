@@ -895,7 +895,7 @@
                   </svg>
                 </div>
                 <div class="advantages__title">
-                  <h3>Бережное отношение к природе</h3>
+                  <h3>Бережное отношение<br class="advantages__br">к природе</h3>
                 </div>
                 <div class="advantages__text">
                   <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
@@ -917,7 +917,31 @@
           </div>
         </section>
         <section class="gallery" data-test="gallery">
-          <h2 class="gallery__heading" data-heading="Фотогалерея">Фотогалерея</h2>
+          <div class="container">
+            <h2 class="gallery__heading" data-heading="Фотогалерея">Фотогалерея</h2>
+            <div class="gallery__text">
+              <p>Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур, а&nbsp;также отмечайте нас&nbsp;на&nbsp;фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
+            </div>
+            <div class="gallery__navigation">
+              <button class="gallery__navigation-button gallery__navigation-button--prev btn btn--slider-navigation" data-button="gallery-prev" type="button" aria-label="Предыдущий слайд">
+                <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                  <use href="img/sprite.svg#big-arrow"></use>
+                </svg>
+              </button>
+              <button class="gallery__navigation-button gallery__navigation-button--next btn btn--slider-navigation" data-button="gallery-next" type="button" aria-label="Следующий слайд">
+                <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                  <use href="img/sprite.svg#big-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="swiper" data-slider="gallery">
+            <ul class="gallery__list swiper-wrapper">
+              <li class="gallery__item swiper-slide">
+
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
       <footer>
