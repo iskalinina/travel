@@ -3822,6 +3822,9 @@ button,
   margin: 0;
 }
 
+.advantages {
+  margin-bottom: 81px;
+}
 @media (max-width: 1199px) {
   .advantages {
     padding: 0 45px;
@@ -4030,6 +4033,85 @@ button,
 @media (max-width: 1199px) {
   .advantages__br {
     display: block;
+  }
+}
+
+.gallery {
+  padding-top: 19px;
+}
+
+.gallery__heading {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 800;
+  position: relative;
+  margin: 0 0 27px;
+}
+@media (max-width: 1199px) {
+  .gallery__heading {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .gallery__heading {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+}
+.gallery__heading::before {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 800;
+  content: attr(data-heading);
+  opacity: 0.03;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  z-index: -1;
+}
+@media (max-width: 1199px) {
+  .gallery__heading::before {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 800;
+  }
+}
+@media (max-width: 1199px) {
+  .gallery__heading::before {
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 800;
+  }
+}
+
+.gallery__text p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0 0 46px;
+  max-width: 695px;
+}
+@media (max-width: 1199px) {
+  .gallery__text p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 21px;
+    max-width: 420px;
+  }
+}
+@media (max-width: 767px) {
+  .gallery__text p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-bottom: 65px;
+    max-width: 290px;
   }
 }
 
