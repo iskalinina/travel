@@ -1,0 +1,46 @@
+.feedback {
+  width: 100%;
+  min-height: 680px;
+  padding-top: 292px;
+  position: relative;
+}
+
+.feedback__background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.feedback__heading h2 {
+  @include text(35px, 35px, $ff-extrabold);
+
+  margin: 0 0 20px;
+  color: $color-default-white;
+  text-align: center;
+}
+
+.feedback__heading p {
+  @include text(16px, 24px);
+
+  margin: 0 0 40px;
+  color: $color-default-white;
+  text-align: center;
+}
+
+.feedback form {
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.feedback__input input {
+  width: 360px;
+  height: 56px;
+  border-radius: 2px;
+  border: 1px solid rgba($color-accent, 0.10);
+  padding: 19px 29px;
+}

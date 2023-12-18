@@ -21,9 +21,6 @@ const initSliderAdv = () => {
       },
       spaceBetween: 30,
     });
-  } else {
-    swiper.destroy();
-    console.log('destroy');
   }
 };
 
