@@ -9,3 +9,168 @@
     padding: 31px 0 40px;
   }
 }
+
+.footer__information {
+  padding-top: 30px;
+  padding-bottom: 32px;
+
+  @include vp-1199 {
+    padding-top: 36px;
+    padding-bottom: 20px;
+  }
+
+  @include vp-767 {
+    padding-top: 22px;
+  }
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include vp-1199 {
+    justify-content: space-between;
+    margin-bottom: 34px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    margin-bottom: 23px;
+  }
+}
+
+.footer__logo {
+  display: block;
+  color: $color-dark;
+  padding: 10px 29px;
+  margin-right: 114px;
+
+  @include vp-1199 {
+    padding: 0;
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 24px;
+  }
+}
+
+.footer__logo svg {
+  display: block;
+}
+
+.footer__menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  align-content: space-between;
+
+  @include vp-1199 {
+    gap: 20px;
+  }
+
+  @include vp-767 {
+    padding: 0 12px;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+    max-height: 73px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__menu-item {
+  @include vp-767 {
+    min-width: 120px;
+  }
+}
+
+.footer__menu-item a {
+  @include text(16px, 16px);
+
+  color: $color-dark;
+  padding-right: 1px;
+  display: block;
+
+  @include vp-1199 {
+    @include text(14px, 14px);
+
+    padding-right: 5px;
+  }
+
+  @include vp-767 {
+    min-width: 120px;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+
+.footer__phone {
+  @include text(18px, 18px, $ff-semibold);
+
+  color: $color-dark;
+  margin-left: auto;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.footer__socials {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto 23px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+
+  @include vp-1199 {
+    gap: 16px;
+    margin-bottom: 34px;
+  }
+
+  @include vp-767 {
+    gap: 16px;
+    margin-bottom: 23px;
+  }
+}
+
+.footer__socials-item {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba($color-dark, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-1199 {
+    width: 32px;
+    height: 30px;
+  }
+}
+
+.footer__socials-item svg {
+  display: block;
+}
+
+.footer__confidence {
+  @include text(12px, 12px, $ff-light);
+
+  color: $color-dark;
+  text-align: center;
+  display: block;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus,
+  &:active {
+    color: $color-default-black;
+  }
+
+}
