@@ -91,6 +91,7 @@
   @include text(16px, 16px);
 
   color: rgba($color-dark, 0.5);
+  background-color: $color-default-white;
   width: 360px;
   height: 56px;
   border-radius: 2px;
@@ -106,6 +107,21 @@
 
   @include vp-767 {
     max-width: 290px;
+  }
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $color-accent-dark;
+  }
+
+  &:disabled {
+    border-color: rgba($color-accent, 0.1);
+    color: rgba($color-accent, 0.5);
   }
 }
 
