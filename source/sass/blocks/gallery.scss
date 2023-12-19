@@ -2,6 +2,10 @@
   padding-top: 23px;
   position: relative;
   margin-bottom: 3px;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+  }
 }
 
 .gallery__heading {
