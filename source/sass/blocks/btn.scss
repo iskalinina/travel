@@ -4,6 +4,7 @@
   border: none;
   cursor: pointer;
   transition: all $trans-default;
+  user-select: none;
 
   &:disabled {
     pointer-events: none;

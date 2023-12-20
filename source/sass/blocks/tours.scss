@@ -1,16 +1,16 @@
 .tours {
   position: relative;
   padding-top: 123px;
-  margin-bottom: 143px;
+  padding-bottom: 100px;
 
   @include vp-1199 {
     padding-top: 68px;
-    margin-bottom: 107px;
+    padding-bottom: 45px;
   }
 
   @include vp-767 {
     padding-top: 54px;
-    margin-bottom: 46px;
+    padding-bottom: 20px;
   }
 }
 
@@ -79,7 +79,7 @@
 .tours__header {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .tours__item h3 {
@@ -192,6 +192,7 @@
   @include text(16px, 16px, $ff-bold);
 
   color: $color-dark;
+  width: fit-content;
   letter-spacing: 0.64px;
   text-transform: uppercase;
   padding: 10px 28px 10px 10px;
@@ -204,7 +205,8 @@
     content: "";
     width: 9px;
     height: 14px;
-    background-image: url("../img/svg/small-arrow.svg");
+    mask-image: url("../img/svg/small-arrow.svg");
+    background-color: $color-dark;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -218,6 +220,32 @@
 
     letter-spacing: 0.56px;
   }
+
+  &:hover,
+  &:focus {
+    color: $color-accent-dark;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $color-accent-dark;
+  }
+
+  &:active {
+    color: $color-accent;
+  }
+
+  &:active::after {
+    background-color: $color-accent;
+  }
+}
+
+.tours__button.is-disable {
+  color: $color-accent;
+}
+
+.tours__button.is-disable::after {
+  background-color: rgba($color-accent, 0.1);
 }
 
 .tours__navigation {
@@ -248,4 +276,15 @@
 .tours__navigation-button:hover svg,
 .tours__navigation-button:focus svg {
   color: $color-accent-dark;
+}
+
+.tours__decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+
+  @include vp-767 {
+    top: 110px;
+  }
 }

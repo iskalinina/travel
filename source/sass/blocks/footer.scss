@@ -1,8 +1,8 @@
 .footer__contacts {
-  padding: 87px 120px 95px;
+  padding: 88px 120px 95px;
 
   @include vp-1199 {
-    padding: 59px 0 40px;
+    padding: 58px 0 40px;
   }
 
   @include vp-767 {
@@ -95,6 +95,18 @@
   color: $color-dark;
   padding-right: 1px;
   display: block;
+  position: relative;
+  transition: $trans-default;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color-dark, 0);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+  }
 
   @include vp-1199 {
     @include text(14px, 14px);
@@ -107,6 +119,24 @@
     text-align: center;
     padding-right: 0;
   }
+
+  &:hover::before {
+    background-color: $color-dark;
+  }
+
+  &:active::before {
+    background-color: $color-transparent;
+  }
+
+  &:focus::before {
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    background-color: $color-transparent;
+    border: 1px solid $color-dark;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .footer__phone {
@@ -115,9 +145,23 @@
   color: $color-dark;
   margin-left: auto;
 
+  &:hover,
+  &:focus {
+    color: $color-accent-dark;
+  }
+
+  &:active {
+    color: $color-accent;
+  }
+
   @include vp-1199 {
     display: none;
   }
+}
+
+.header__phone.is-disabled {
+  color: $color-accent;
+  pointer-events: none;
 }
 
 .footer__socials {
@@ -139,7 +183,7 @@
   }
 }
 
-.footer__socials-item {
+.footer__socials-item a {
   width: 30px;
   height: 30px;
   border: 1px solid rgba($color-dark, 0.2);
@@ -151,10 +195,34 @@
     width: 32px;
     height: 30px;
   }
+
+  &:hover,
+  &:focus {
+    border-color: $color-dark;
+  }
+
+  &:active {
+    border-color: $color-accent;
+    background-color: $color-accent;
+  }
 }
 
 .footer__socials-item svg {
   display: block;
+  color: $color-dark;
+}
+
+.footer__socials-item a:active svg {
+  color: $color-default-white;
+}
+
+.footer__socials-item a.is-disable {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.footer__socials-item a.is-disable svg {
+  opacity: 0.3;
 }
 
 .footer__confidence {
@@ -172,5 +240,4 @@
   &:active {
     color: $color-default-black;
   }
-
 }

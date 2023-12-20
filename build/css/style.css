@@ -1255,6 +1255,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -1489,6 +1490,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .btn:disabled {
   pointer-events: none;
@@ -2526,6 +2531,22 @@ button,
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.hero__play-button:hover, .hero__play-button:focus {
+  border: 1px solid rgba(28, 51, 116, 0.1);
+}
+.hero__play-button:active {
+  border: 1px solid rgba(28, 51, 116, 0.1);
+  background-color: rgba(28, 51, 116, 0.1);
+}
+.hero__play-button:disabled {
+  border: 1px solid rgba(2, 102, 193, 0.1);
+}
+
+.hero__play-button:disabled svg {
+  color: rgba(2, 102, 193, 0.1);
 }
 
 .hero__media {
@@ -2653,18 +2674,18 @@ button,
 .tours {
   position: relative;
   padding-top: 123px;
-  margin-bottom: 143px;
+  padding-bottom: 100px;
 }
 @media (max-width: 1199px) {
   .tours {
     padding-top: 68px;
-    margin-bottom: 107px;
+    padding-bottom: 45px;
   }
 }
 @media (max-width: 767px) {
   .tours {
     padding-top: 54px;
-    margin-bottom: 46px;
+    padding-bottom: 20px;
   }
 }
 
@@ -2752,7 +2773,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .tours__item h3 {
@@ -2885,6 +2906,9 @@ button,
   line-height: 16px;
   font-weight: 700;
   color: #2d383f;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   letter-spacing: 0.64px;
   text-transform: uppercase;
   padding: 10px 28px 10px 10px;
@@ -2897,7 +2921,9 @@ button,
   content: "";
   width: 9px;
   height: 14px;
-  background-image: url("../img/svg/small-arrow.svg");
+  -webkit-mask-image: url("../img/svg/small-arrow.svg");
+          mask-image: url("../img/svg/small-arrow.svg");
+  background-color: #2d383f;
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
@@ -2914,6 +2940,26 @@ button,
     font-weight: 700;
     letter-spacing: 0.56px;
   }
+}
+.tours__button:hover, .tours__button:focus {
+  color: #1c3374;
+}
+.tours__button:hover::after, .tours__button:focus::after {
+  background-color: #1c3374;
+}
+.tours__button:active {
+  color: #0266c1;
+}
+.tours__button:active::after {
+  background-color: #0266c1;
+}
+
+.tours__button.is-disable {
+  color: #0266c1;
+}
+
+.tours__button.is-disable::after {
+  background-color: rgba(2, 102, 193, 0.1);
 }
 
 .tours__navigation {
@@ -2947,6 +2993,18 @@ button,
 .tours__navigation-button:hover svg,
 .tours__navigation-button:focus svg {
   color: #1c3374;
+}
+
+.tours__decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .tours__decor {
+    top: 110px;
+  }
 }
 
 .training {
@@ -3089,6 +3147,7 @@ button,
 }
 
 .training__item {
+  background-color: #ffffff;
   padding: 14px;
   min-height: 356px;
   height: auto;
@@ -3166,6 +3225,30 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.training__link:hover, .training__link:focus {
+  border-color: #2d383f;
+}
+.training__link:active {
+  border-color: #0266c1;
+  background-color: #0266c1;
+}
+
+.training__link svg {
+  color: #2d383f;
+}
+
+.training__link:active svg {
+  color: #ffffff;
+}
+
+.training__link.is-disable {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.training__link.is-disable svg {
+  opacity: 0.3;
 }
 
 .training .container > h3 {
@@ -4375,11 +4458,11 @@ button,
 }
 
 .footer__contacts {
-  padding: 87px 120px 95px;
+  padding: 88px 120px 95px;
 }
 @media (max-width: 1199px) {
   .footer__contacts {
-    padding: 59px 0 40px;
+    padding: 58px 0 40px;
   }
 }
 @media (max-width: 767px) {
@@ -4500,6 +4583,18 @@ button,
   color: #2d383f;
   padding-right: 1px;
   display: block;
+  position: relative;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.footer__menu-item a::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(45, 56, 63, 0);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
 }
 @media (max-width: 1199px) {
   .footer__menu-item a {
@@ -4516,6 +4611,23 @@ button,
     padding-right: 0;
   }
 }
+.footer__menu-item a:hover::before {
+  background-color: #2d383f;
+}
+.footer__menu-item a:active::before {
+  background-color: rgba(255, 255, 255, 0);
+}
+.footer__menu-item a:focus::before {
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #2d383f;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 
 .footer__phone {
   font-size: 18px;
@@ -4524,10 +4636,21 @@ button,
   color: #2d383f;
   margin-left: auto;
 }
+.footer__phone:hover, .footer__phone:focus {
+  color: #1c3374;
+}
+.footer__phone:active {
+  color: #0266c1;
+}
 @media (max-width: 1199px) {
   .footer__phone {
     display: none;
   }
+}
+
+.header__phone.is-disabled {
+  color: #0266c1;
+  pointer-events: none;
 }
 
 .footer__socials {
@@ -4555,7 +4678,7 @@ button,
   }
 }
 
-.footer__socials-item {
+.footer__socials-item a {
   width: 30px;
   height: 30px;
   border: 1px solid rgba(45, 56, 63, 0.2);
@@ -4570,14 +4693,35 @@ button,
           justify-content: center;
 }
 @media (max-width: 1199px) {
-  .footer__socials-item {
+  .footer__socials-item a {
     width: 32px;
     height: 30px;
   }
 }
+.footer__socials-item a:hover, .footer__socials-item a:focus {
+  border-color: #2d383f;
+}
+.footer__socials-item a:active {
+  border-color: #0266c1;
+  background-color: #0266c1;
+}
 
 .footer__socials-item svg {
   display: block;
+  color: #2d383f;
+}
+
+.footer__socials-item a:active svg {
+  color: #ffffff;
+}
+
+.footer__socials-item a.is-disable {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.footer__socials-item a.is-disable svg {
+  opacity: 0.3;
 }
 
 .footer__confidence {
@@ -4664,7 +4808,7 @@ button,
     font-size: 25px;
     line-height: 25px;
     font-weight: 800;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 767px) {

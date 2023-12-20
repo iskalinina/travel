@@ -119,6 +119,7 @@
 }
 
 .training__item {
+  background-color: $color-default-white;
   padding: 14px;
   min-height: 356px;
   height: auto;
@@ -177,6 +178,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover,
+  &:focus {
+    border-color: $color-dark;
+  }
+
+  &:active {
+    border-color: $color-accent;
+    background-color: $color-accent;
+  }
+}
+
+.training__link svg {
+  color: $color-dark;
+}
+
+.training__link:active svg {
+  color: $color-default-white;
+}
+
+.training__link.is-disable {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.training__link.is-disable svg {
+  opacity: 0.3;
 }
 
 .training .container > h3 {

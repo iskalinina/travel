@@ -152,6 +152,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: $trans-default;
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba($color-accent-dark, 0.1);
+  }
+
+  &:active {
+    border: 1px solid rgba($color-accent-dark, 0.1);
+    background-color: rgba($color-accent-dark, 0.1);
+  }
+
+  &:disabled {
+    border: 1px solid rgba($color-accent, 0.1);
+  }
+}
+
+.hero__play-button:disabled svg {
+  color: rgba($color-accent, 0.1);
 }
 
 .hero__media {
