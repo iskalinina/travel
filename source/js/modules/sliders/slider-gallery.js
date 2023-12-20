@@ -15,21 +15,24 @@ const initSliderGallery = () => {
       loop: true,
       breakpoints: {
         1200: {
-          slidesPerView: 5,
+          slidesPerView: 'auto',
           spaceBetween: 5,
           slidesPerGroup: 2,
+          initialSlide: 5,
         },
 
         768: {
           slidesPerView: 3,
           spaceBetween: 5,
           slidesPerGroup: 2,
+          initialSlide: 0,
         },
 
         320: {
           slidesPerView: 2,
           spaceBetween: 3,
           slidesPerGroup: 2,
+          initialSlide: 0,
         },
       },
     });

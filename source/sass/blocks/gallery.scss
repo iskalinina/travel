@@ -143,5 +143,29 @@
   }
 }
 
+.gallery__item--first {
+  @include vp-only-desktop {
+    width: 275px;
+  }
+}
+
+.gallery__item--third {
+  @include vp-only-desktop {
+    width: 272px;
+  }
+}
+
+.gallery__item--fifth {
+  @include vp-only-desktop {
+    width: 276px;
+  }
+}
+
+.gallery__item--double {
+  @include vp-only-desktop {
+    width: 298px;
+  }
+}
+
 
 

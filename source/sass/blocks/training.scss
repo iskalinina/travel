@@ -1,8 +1,10 @@
 .training {
-  margin-bottom: 64px;
+  padding-top: 43px;
+  padding-bottom: 8px;
 
   @include vp-1199 {
-    margin-bottom: 41px;
+    padding-top: 63px;
+    padding-bottom: 23px;
   }
 
   @include vp-767 {
@@ -11,10 +13,10 @@
 }
 
 .training .swiper {
-  margin-bottom: 58px;
+  margin-bottom: 57px;
 
   @include vp-1199 {
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 
   @include vp-767 {
@@ -26,7 +28,7 @@
   @include  text(35px, 35px, $ff-extrabold);
 
   color: $color-dark;
-  margin: 0 0 31px;
+  margin: 0 0 32px;
   position: relative;
 
   &::before {
@@ -49,7 +51,7 @@
   @include vp-1199 {
     @include  text(25px, 25px, $ff-extrabold);
 
-    margin-bottom: 22px;
+    margin-bottom: 21px;
   }
 
   @include vp-767 {
@@ -63,7 +65,7 @@
   @include text(16px, 24px);
 
   max-width: 820px;
-  margin: 0 0 61px;
+  margin: 0 0 60px;
 
   @include vp-1199 {
     max-width: 560px;
@@ -136,7 +138,7 @@
 
 .training__photo {
   background-color: $color-grey;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   min-height: 200px;
   display: flex;
 }
@@ -171,6 +173,7 @@
 }
 
 .training__link {
+  margin-top: -1px;
   width: 24px;
   height: 24px;
   background-color: $color-transparent;
@@ -215,7 +218,7 @@
   @include vp-1199 {
     @include text(18px, 18px, $ff-bold);
 
-    margin-bottom: 36px;
+    margin-bottom: 37px;
   }
 
   @include vp-767 {
@@ -324,7 +327,6 @@
 }
 
 .training__path-item svg {
-  flex-shrink: 0;
   margin-right: 10px;
   margin-top: 2px;
   display: block;
@@ -412,5 +414,19 @@
     height: 60px;
     top: 12px;
     left: 6px;
+  }
+}
+
+.training__path-item--equipment svg {
+  @include vp-1199 {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.training__path-item--mountain svg {
+  @include vp-1199 {
+    width: 23px;
+    height: 23px;
   }
 }

@@ -1206,42 +1206,42 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-v26-cyrillic_latin-regular.woff2") format("woff2");
+  src: url("../../fonts/montserrat-v26-cyrillic_cyrillic-ext_latin_latin-ext-regular.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 300;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-v26-cyrillic_latin-300.woff2") format("woff2");
+  src: url("../../fonts/montserrat-v26-cyrillic_cyrillic-ext_latin_latin-ext-300.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 500;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-v26-cyrillic_latin-500.woff2") format("woff2");
+  src: url("../../fonts/montserrat-v26-cyrillic_cyrillic-ext_latin_latin-ext-500.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 600;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-v26-cyrillic_latin-600.woff2") format("woff2");
+  src: url("../../fonts/montserrat-v26-cyrillic_cyrillic-ext_latin_latin-ext-600.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-v26-cyrillic_latin-700.woff2") format("woff2");
+  src: url("../../fonts/montserrat-v26-cyrillic_cyrillic-ext_latin_latin-ext-700.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 800;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-v26-cyrillic_latin-800.woff2") format("woff2");
+  src: url("../../fonts/montserrat-v26-cyrillic_cyrillic-ext_latin_latin-ext-800.woff2") format("woff2");
 }
 *,
 *::before,
@@ -1413,14 +1413,6 @@ button,
   width: 100%;
   background: rgba(45, 56, 63, 0.6);
   z-index: 100;
-}
-
-.rouble {
-  font-family: "Rouble", "Arial", sans-serif;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
 }
 
 .visually-hidden {
@@ -3008,11 +3000,13 @@ button,
 }
 
 .training {
-  margin-bottom: 64px;
+  padding-top: 43px;
+  padding-bottom: 8px;
 }
 @media (max-width: 1199px) {
   .training {
-    margin-bottom: 41px;
+    padding-top: 63px;
+    padding-bottom: 23px;
   }
 }
 @media (max-width: 767px) {
@@ -3022,11 +3016,11 @@ button,
 }
 
 .training .swiper {
-  margin-bottom: 58px;
+  margin-bottom: 57px;
 }
 @media (max-width: 1199px) {
   .training .swiper {
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 }
 @media (max-width: 767px) {
@@ -3040,7 +3034,7 @@ button,
   line-height: 35px;
   font-weight: 800;
   color: #2d383f;
-  margin: 0 0 31px;
+  margin: 0 0 32px;
   position: relative;
 }
 .training__heading::before {
@@ -3067,7 +3061,7 @@ button,
     font-size: 25px;
     line-height: 25px;
     font-weight: 800;
-    margin-bottom: 22px;
+    margin-bottom: 21px;
   }
 }
 @media (max-width: 767px) {
@@ -3084,7 +3078,7 @@ button,
   line-height: 24px;
   font-weight: 400;
   max-width: 820px;
-  margin: 0 0 61px;
+  margin: 0 0 60px;
 }
 @media (max-width: 1199px) {
   .training .container > p {
@@ -3166,7 +3160,7 @@ button,
 
 .training__photo {
   background-color: #999999;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   min-height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3212,6 +3206,7 @@ button,
 }
 
 .training__link {
+  margin-top: -1px;
   width: 24px;
   height: 24px;
   background-color: rgba(255, 255, 255, 0);
@@ -3262,7 +3257,7 @@ button,
     font-size: 18px;
     line-height: 18px;
     font-weight: 700;
-    margin-bottom: 36px;
+    margin-bottom: 37px;
   }
 }
 @media (max-width: 767px) {
@@ -3404,8 +3399,6 @@ button,
 }
 
 .training__path-item svg {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   margin-right: 10px;
   margin-top: 2px;
   display: block;
@@ -3514,6 +3507,20 @@ button,
     height: 60px;
     top: 12px;
     left: 6px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .training__path-item--equipment svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .training__path-item--mountain svg {
+    width: 23px;
+    height: 23px;
   }
 }
 
@@ -4292,6 +4299,30 @@ button,
 @media (max-width: 767px) {
   .gallery__wrapper {
     padding: 0 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery__item--first {
+    width: 275px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery__item--third {
+    width: 272px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery__item--fifth {
+    width: 276px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery__item--double {
+    width: 298px;
   }
 }
 

@@ -14,19 +14,19 @@ const initSliderTrainings = () => {
 
       breakpoints: {
         1200: {
-          initialSlide: 0,
+          initialSlide: 1,
           slidesPerView: 4,
           spaceBetween: 20,
         },
 
         768: {
-          initialSlide: 0,
+          initialSlide: 1,
           slidesPerView: 3,
           spaceBetween: 20,
         },
 
         320: {
-          initialSlide: 2,
+          initialSlide: 3,
           slidesPerView: 1,
           spaceBetween: 0,
         },
