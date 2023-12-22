@@ -65,6 +65,7 @@
 
   @include vp-767 {
     @include text(12px, 18px);
+
     max-width: 290px;
     margin-bottom: 20px;
   }
@@ -99,7 +100,7 @@
   width: 360px;
   height: 56px;
   border-radius: 2px;
-  border: 1px solid rgba($color-accent, 0.10);
+  border: 1px solid rgba($color-accent, 0.1);
   padding: 19px 29px;
 
   @include vp-1199 {
@@ -142,11 +143,12 @@
 
 .feedback__input.is-invalid input {
   border-color: #ff121f;
-  color: rgba(45,56,63,.5);
+  color: rgba(45, 56, 63, 0.5);
 }
 
 .input-message {
   @include text(14px, 14px);
+
   color: #ff121f;
   display: block;
 }

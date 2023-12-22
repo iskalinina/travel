@@ -30,7 +30,7 @@
   }
 
   @include vp-767 {
-    padding-top: 10px;
+    padding-top: 15px;
   }
 }
 
@@ -89,7 +89,6 @@
   margin: 0 0 50px;
 
   @include vp-1199 {
-
     max-width: 480px;
     margin-bottom: 40px;
   }
@@ -190,8 +189,6 @@
 
   @include vp-767 {
     @include text(14px, 14px, $ff-semibold);
-
-    margin-bottom: 5px;
   }
 }
 
@@ -202,5 +199,16 @@
 
   @include vp-1199 {
     @include text(14px, 22px);
+  }
+
+  @include vp-767 {
+    @include text(14px, 20px);
+  }
+}
+
+.contacts__item:last-child span {
+  @include vp-767 {
+    display: flex;
+    padding-top: 3px;
   }
 }

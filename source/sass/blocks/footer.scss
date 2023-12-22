@@ -20,7 +20,7 @@
   }
 
   @include vp-767 {
-    padding-top: 22px;
+    padding-top: 23px;
   }
 }
 
@@ -52,7 +52,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
   }
 }
 
@@ -216,12 +216,12 @@
   color: $color-default-white;
 }
 
-.footer__socials-item a.is-disable {
+.footer__socials-item .is-disable {
   pointer-events: none;
   opacity: 0.3;
 }
 
-.footer__socials-item a.is-disable svg {
+.footer__socials-item .is-disable svg {
   opacity: 0.3;
 }
 

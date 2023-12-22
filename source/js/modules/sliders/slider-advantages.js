@@ -36,4 +36,3 @@ const onResize = () => {
 window.addEventListener('resize', onResize);
 
 export {initSliderAdv};
-

@@ -15,18 +15,9 @@ $color-dark: #2d383f;
 $color-accent: #0266c1;
 $color-accent-dark: #1c3374;
 
-// Gradient
-
-$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
 // Typography
 // ---------------------------------
 
-// переменная используемая в html для подключения скейлинга
-$fz-default: 16px;
-
-// у некоторых шрифтов в ios возникают проблемы с символом рубля
-// https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-montserrat: "Montserrat", "Arial", sans-serif;
 $ff-light: 300;
 $ff-normal: 400;
@@ -43,7 +34,6 @@ $trans-default: 0.3s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
 $trans-600: 0.6s $tf-default;
 
 // Viewports
@@ -52,9 +42,3 @@ $trans-600: 0.6s $tf-default;
 $vp-320: 320px;
 $vp-768: 768px;
 $vp-1200: 1200px;
-
-// Retina
-// ---------------------------------
-
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;

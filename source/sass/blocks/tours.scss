@@ -15,7 +15,7 @@
 }
 
 .tours__heading {
-  @include  text(35px, 35px, $ff-extrabold);
+  @include text(35px, 35px, $ff-extrabold);
 
   color: $color-dark;
   margin: 0 0 50px;
@@ -38,6 +38,7 @@
 
   @include vp-767 {
     @include text(22px, 22px, $ff-extrabold);
+
     margin-bottom: 24px;
   }
 }
@@ -153,6 +154,7 @@
 
 .tours__footer-title {
   @include text(12px, 12px, $ff-light);
+
   margin: 0 0 7px;
 }
 
@@ -163,6 +165,7 @@
 .tours__date span,
 .tours__group span {
   @include text(13px, 13px, $ff-bold);
+
   display: block;
   margin: 0;
 }
@@ -267,7 +270,6 @@
 }
 
 .tours__navigation-button {
-
   &--next {
     transform: rotate(180deg);
   }

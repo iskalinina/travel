@@ -26,7 +26,7 @@
 }
 
 .training__heading {
-  @include  text(35px, 35px, $ff-extrabold);
+  @include text(35px, 35px, $ff-extrabold);
 
   color: $color-dark;
   margin: 0 0 32px;
@@ -50,7 +50,7 @@
   }
 
   @include vp-1199 {
-    @include  text(25px, 25px, $ff-extrabold);
+    @include text(25px, 25px, $ff-extrabold);
 
     margin-bottom: 21px;
   }
@@ -109,7 +109,6 @@
 }
 
 .training__navigation-button {
-
   &--next {
     transform: rotate(180deg);
   }
@@ -269,6 +268,12 @@
     position: absolute;
     bottom: 0;
     left: 10px;
+
+    @include vp-767 {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
   }
 
   &::after {
@@ -279,12 +284,20 @@
     position: absolute;
     bottom: 6px;
     left: 0;
+
+    @include vp-767 {
+      width: 2px;
+      height: 60px;
+      top: 12px;
+      left: 6px;
+    }
   }
 
   @include vp-1199 {
     padding-right: 0;
     padding-bottom: 24px;
   }
+
   @include vp-767 {
     padding: 0 0 0 28px;
     align-items: center;
@@ -307,9 +320,15 @@
 
 .training__path-item--mountain {
   flex-grow: 1;
+  order: 2;
 
   @include vp-1199 {
     flex-grow: 0;
+    order: 1;
+  }
+
+  @include vp-767 {
+    order: 2;
   }
 }
 
@@ -342,18 +361,6 @@
   }
 }
 
-.training__path-item--mountain {
-  order: 2;
-
-  @include vp-1199 {
-    order: 1;
-  }
-
-  @include vp-767 {
-    order: 2;
-  }
-}
-
 .training__path-item--lections {
   order: 1;
 
@@ -371,6 +378,12 @@
   @include vp-1199 {
     top: -23px;
     left: 10px;
+  }
+
+  @include vp-767 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -402,21 +415,8 @@
     bottom: -52px;
     left: 16px;
   }
-}
 
-.training__path-item::before {
   @include vp-767 {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-}
-
-.training__path-item::after {
-  @include vp-767 {
-    width: 2px;
-    height: 60px;
-    top: 12px;
     left: 6px;
   }
 }

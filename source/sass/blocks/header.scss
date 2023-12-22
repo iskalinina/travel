@@ -95,6 +95,7 @@
 
   @include vp-767 {
     @include text(14px, 14px, $ff-bold);
+
     letter-spacing: 0.56px;
   }
 
@@ -157,6 +158,7 @@
 
   @include vp-767 {
     @include text(14px, 14px, $ff-semibold);
+
     width: 100%;
     text-align: right;
     padding-top: 16px;
@@ -221,5 +223,3 @@
 .header__nav.is-open .header__logo svg {
   color: $color-dark;
 }
-
-

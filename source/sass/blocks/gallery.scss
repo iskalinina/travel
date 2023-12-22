@@ -96,7 +96,6 @@
 }
 
 .gallery__navigation-button {
-
   &--next {
     transform: rotate(180deg);
   }
@@ -119,6 +118,10 @@
   &--double {
     display: flex;
     flex-direction: column;
+
+    @include vp-only-desktop {
+      width: 298px;
+    }
   }
 }
 
@@ -170,12 +173,3 @@
     width: 276px;
   }
 }
-
-.gallery__item--double {
-  @include vp-only-desktop {
-    width: 298px;
-  }
-}
-
-
-
