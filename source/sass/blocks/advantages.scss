@@ -1,14 +1,14 @@
 .advantages {
-  margin-bottom: 81px;
+  padding-top: 65px;
+  padding-bottom: 81px;
 
   @include vp-1199 {
-    padding: 0 45px;
-    margin-bottom: 40px;
+    padding: 68px 45px 45px;
   }
 
   @include vp-767 {
-    padding: 0 15px;
-    margin-bottom: 23px;
+    padding: 46px 15px 40px;
+
   }
 }
 
@@ -34,7 +34,7 @@
     content: attr(data-heading);
     opacity: 0.03;
     position: absolute;
-    bottom: 7px;
+    bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
@@ -89,6 +89,10 @@
 
 .advantages__item:last-child:nth-child(odd) {
   max-width: 380px;
+
+  @include vp-767 {
+    max-width: 100%;
+  }
 }
 
 .advantages__icon {

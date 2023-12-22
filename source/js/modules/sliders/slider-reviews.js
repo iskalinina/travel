@@ -17,17 +17,17 @@ const initSliderReviews = () => {
 
       breakpoints: {
         1200: {
-          initialSlide: 0,
+          initialSlide: 1,
           spaceBetween: 120,
         },
 
         768: {
-          initialSlide: 0,
+          initialSlide: 1,
           spaceBetween: 30,
         },
 
         320: {
-          initialSlide: 0,
+          initialSlide: 1,
           spaceBetween: 0,
         },
       },

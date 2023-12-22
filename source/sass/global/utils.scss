@@ -2,9 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
+  height: calc(100 * var(--vh, 1vh));
 
   .header,
   .footer {
@@ -17,20 +16,25 @@
 
   &--overlay {
     overflow: hidden;
-    height: 100dvh;
   }
+}
 
-  &--overlay::before {
-    content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(45, 56, 63, 0.6);
-    z-index: 100;
-  }
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba(45, 56, 63, 0.6);
+  z-index: 50;
+  display: none;
+}
+
+.overlay.is-open {
+  display: block;
 }
 
 .visually-hidden {

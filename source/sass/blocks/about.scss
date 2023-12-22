@@ -3,16 +3,17 @@
   justify-content: flex-end;
   padding-right: 120px;
   position: relative;
-  margin-bottom: 134px;
+  padding-bottom: 81px;
+  padding-top: 56px;
 
   @include vp-1199 {
+    padding-top: 18px;
     padding-right: 45px;
-    margin-bottom: 57px;
+    padding-bottom: 2px;
   }
 
   @include vp-767 {
     padding: 0;
-    margin-bottom: 41px;
     flex-direction: column;
   }
 }
@@ -22,13 +23,13 @@
   max-width: 808px;
   flex-shrink: 0;
   position: absolute;
-  top: 0;
+  top: 56px;
   left: 0;
   z-index: -1;
 
   @include vp-1199 {
     max-width: 542px;
-    top: 42px;
+    top: 61px;
   }
 
   @include vp-767 {
@@ -91,7 +92,7 @@
     @include  text(22px, 22px, $ff-extrabold);
 
     padding-left: 0;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 }
 
@@ -117,7 +118,7 @@
   @include vp-767 {
     @include text(16px, 16px, $ff-bold);
 
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
 }
 

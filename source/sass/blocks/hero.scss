@@ -268,18 +268,18 @@
 
   &:focus::before {
     content: "";
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     background-color: $color-transparent;
     border: 1px solid rgba($color-default-white, 0.5);
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
 }
 
-.hero__pagination .swiper-pagination .swiper-pagination-bullet-active {
+.hero__pagination .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: $color-default-white;
 }

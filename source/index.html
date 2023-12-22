@@ -21,7 +21,7 @@
       <header class="header" data-test="hero">
         <nav class="header__nav" data-menu="menu">
           <button class="header__toggle-button btn" data-button="toggle-button" type="button" aria-label="Меню"></button>
-          <ul class="header__menu">
+          <ul class="header__menu" data-list="menu-list">
             <li class="header__menu-item">
               <a href="#tours">Туры</a>
             </li>
@@ -41,7 +41,7 @@
               <a href="#contacts">Контакты</a>
             </li>
           </ul>
-          <a class="header__logo" href="#">
+          <a class="header__logo" href="#" aria-label="Логотип Лайфтур">
             <svg width="142" height="42" viewBox="0 0 142 42" role="img">
               <use href="img/sprite.svg#logo-desktop"></use>
             </svg>
@@ -149,7 +149,7 @@
                       </div>
                     </div>
                     <div class="hero__media hero__media--music">
-                      <iframe frameborder="0" style="border:none;width:395px;height:240px;" loading="lazy" width="395" height="240" src="https://music.yandex.ru/iframe/track/112912322/25474374">Слушайте <a href='https://music.yandex.ru/album/25474374/track/112912322'>001. Конец фронтенда, одинаковые фреймворки и логические свойства</a> на Яндекс Музыке</iframe>
+                      <iframe frameborder="0" style="border:none;width:395px;height:240px;" loading="lazy" width="395" height="240" src="https://music.yandex.ru/iframe/track/112912322/25474374" title="Подкаст.">Слушайте <a href='https://music.yandex.ru/album/25474374/track/112912322'>001. Конец фронтенда, одинаковые фреймворки и логические свойства</a> на Яндекс Музыке</iframe>
                     </div>
                   </div>
               </li>
@@ -451,7 +451,7 @@
               </svg>
             </button>
           </div>
-          <a class="tours__button btn" type="button">Показать все&nbsp;туры</a>
+          <a class="tours__button btn"href="#">Показать все&nbsp;туры</a>
         </section>
         <section class="training" data-test="training" id="training">
           <div class="container">
@@ -485,7 +485,7 @@
                   </div>
                   <div class="training__title">
                     <h4>Константин<br>Константинопольский</h4>
-                    <a class="training__link" href="#">
+                    <a class="training__link" href="#" aria-label="Ссылка на соцсети тренера">
                       <svg width="14" height="8" viewBox="0 0 14 8" role="img">
                         <use href="img/sprite.svg#vk"></use>
                       </svg>
@@ -504,7 +504,7 @@
                   </div>
                   <div class="training__title">
                     <h4>Александр<br>Прокофьев</h4>
-                    <a class="training__link" href="#">
+                    <a class="training__link" href="#" aria-label="Ссылка на соцсети тренера">
                       <svg width="14" height="8" viewBox="0 0 14 8" role="img">
                         <use href="img/sprite.svg#vk"></use>
                       </svg>
@@ -523,7 +523,7 @@
                   </div>
                   <div class="training__title">
                     <h4>Светлана<br>Афиногенова</h4>
-                    <a class="training__link" href="#">
+                    <a class="training__link" href="#" aria-label="Ссылка на соцсети тренера">
                       <svg width="14" height="8" viewBox="0 0 14 8" role="img">
                         <use href="img/sprite.svg#vk"></use>
                       </svg>
@@ -544,7 +544,7 @@
                   </div>
                   <div class="training__title">
                     <h4>Надежда<br>Колесниченко</h4>
-                    <a class="training__link" href="#">
+                    <a class="training__link" href="#"  aria-label="Ссылка на соцсети тренера">
                       <svg width="14" height="8" viewBox="0 0 14 8" role="img">
                         <use href="img/sprite.svg#vk"></use>
                       </svg>
@@ -561,7 +561,7 @@
                   </div>
                   <div class="training__title">
                     <h4>Федор<br>Кайгородов</h4>
-                    <a class="training__link" href="#">
+                    <a class="training__link" href="#" aria-label="Ссылка на соцсети тренера">
                       <svg width="14" height="8" viewBox="0 0 14 8" role="img">
                         <use href="img/sprite.svg#vk"></use>
                       </svg>
@@ -652,7 +652,29 @@
                 </div>
                 <div class="reviews__text">
                   <p>Осенью ходили в&nbsp;поход на&nbsp;Алтай с&nbsp;друзьями. Впечатления потрясающие! Инструкторы&nbsp;— настоящие эксперты&nbsp;— всему научили, все&nbsp;показали. Делились увлекательными историями о&nbsp;местах, людях, культуре места.</p>
-                  <p>С&nbsp;уверенностью могу сказать, что&nbsp;жизнь разделилась на&nbsp;до&nbsp;этого и&nbsp;после. Ещё&nbsp;никогда не&nbsp;отдыхал так&nbsp;душой и&nbsp;телом. Всем очень рекомендую!</p>
+                  <p>С&nbsp;уверенностью могу сказать, что&nbsp;жизнь разделилась на&nbsp;до&nbsp;этого и&nbsp;после. Ещё&nbsp;никогда не&nbsp;отдыхал так&nbsp;душой <br class="reviews__br">и&nbsp;телом. Всем очень рекомендую!</p>
+                  <div class="reviews__author">
+                    <p>Фролов Александр</p>
+                  </div>
+                  <div class="reviews__info">
+                    <p>38&nbsp;лет, Москва</p>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__photo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/reviews1_mobile1x.webp 1x, ./img/content/reviews1_mobile2x.webp 2x" width="280" height="169">
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/content/reviews1_tablet1x.webp 1x, ./img/content/reviews1_tablet2x.webp 2x" width="186" height="237">
+                    <source type="image/webp" srcset="./img/content/reviews1_desktop1x.webp 1x, ./img/content/reviews1_desktop2x.webp 2x" width="258" height="253">
+                    <source type="image/png" media="(max-width: 767px)" srcset="img/content/reviews1_mobile1x.png 1x, img/content/reviews1_mobile2x.png 2x" width="280" height="169">
+                    <source type="image/png" media="(max-width: 1199px)" srcset="img/content/reviews1_tablet1x.png 1x, img/content/reviews1_tablet2x.png 2x" width="186" height="237">
+                    <img src="./img/content/reviews1_desktop1x.png" srcset="./img/content/reviews1_desktop2x.png 2x" width="258" height="253" alt="Отзыв № 1.">
+                  </picture>
+                </div>
+                <div class="reviews__text">
+                  <p>Осенью ходили в&nbsp;поход на&nbsp;Алтай с&nbsp;друзьями. Впечатления потрясающие! Инструкторы&nbsp;— настоящие эксперты&nbsp;— всему научили, все&nbsp;показали. Делились увлекательными историями о&nbsp;местах, людях, культуре места.</p>
+                  <p>С&nbsp;уверенностью могу сказать, что&nbsp;жизнь разделилась на&nbsp;до&nbsp;этого и&nbsp;после. Ещё&nbsp;никогда не&nbsp;отдыхал так&nbsp;душой <br class="reviews__br">и&nbsp;телом. Всем очень рекомендую!</p>
                   <div class="reviews__author">
                     <p>Фролов Александр</p>
                   </div>
@@ -793,7 +815,7 @@
                   </svg>
                 </div>
                 <div class="advantages__title">
-                  <h3>Бережное отношение<br class="advantages__br">к природе</h3>
+                  <h3>Бережное отношение<br class="advantages__br"> к природе</h3>
                 </div>
                 <div class="advantages__text">
                   <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
@@ -921,19 +943,21 @@
             <h2>Остались вопросы?</h2>
             <p>Заполните форму и&nbsp;наш&nbsp;оператор свяжется с&nbsp;вами для&nbsp;консультации.</p>
           </div>
-          <form action="https://echo.htmlacademy.ru/" method="post" data-form="data-form">
-            <div class="feedback__input">
-              <label aria-label="Введите телефон">
-                <input type="tel" name="tel" placeholder="Телефон">
-              </label>
-            </div>
-            <div class="feedback__input">
-              <label aria-label="Введите адрес вашей электронной почты">
-                <input type="email" name="email" placeholder="Email">
-              </label>
-            </div>
-            <button class="feedback__button btn btn--primary" type="submit">Отправить</button>
-          </form>
+          <div class="feedback__form-wrapper" data-form-validate="data-form-validate" data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="post" data-form="data-form">
+              <div class="feedback__input" data-validate-type="phone" data-message-base="Заполните поле" data-required="data-required">
+                <label aria-label="Введите телефон">
+                  <input type="tel" name="tel" placeholder="Телефон">
+                </label>
+              </div>
+              <div class="feedback__input" data-validate-type="email" data-message-base="Заполните поле в правильном формате" data-required="data-required">
+                <label aria-label="Введите адрес вашей электронной почты">
+                  <input type="email" name="email" placeholder="Email">
+                </label>
+              </div>
+              <button class="feedback__button btn btn--primary" type="submit" data-submit="submit">Отправить</button>
+            </form>
+          </div>
         </section>
       </main>
       <footer class="footer" data-test="footer">
@@ -969,7 +993,7 @@
         </div>
         <div class="footer__information container">
           <div class="footer__links">
-            <a class="footer__logo" href="#">
+            <a class="footer__logo" href="#" aria-label="Логотип Лайфтур">
               <svg width="142" height="42" viewBox="0 0 142 42" role="img">
                 <use href="img/sprite.svg#logo-desktop"></use>
               </svg>
@@ -1023,6 +1047,7 @@
         </div>
       </footer>
     </div>
+    <div class="overlay" data-overlay="overlay"></div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

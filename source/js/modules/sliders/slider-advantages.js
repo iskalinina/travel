@@ -6,11 +6,12 @@ const buttonPrev = document.querySelector('[data-button="advantages-prev"]');
 
 const desktop = window.matchMedia('(min-width: 1200px)');
 
-const initSliderAdv = () => {
+let swiperInner;
+
+function initSliderAdv() {
   if (sliderAdv && desktop.matches) {
     // eslint-disable-next-line
-    new swiper(sliderAdv, {
-
+    swiperInner = new swiper(sliderAdv, {
       loop: true,
       slidesPerView: 'auto',
       centeredSlides: true,
@@ -22,6 +23,17 @@ const initSliderAdv = () => {
       spaceBetween: 30,
     });
   }
+}
+
+const onResize = () => {
+  if (sliderAdv && !desktop.matches && swiperInner) {
+    swiperInner.destroy();
+  } else if ((swiperInner && !swiperInner.initialized) || !swiperInner) {
+    initSliderAdv();
+  }
 };
 
+window.addEventListener('resize', onResize);
+
 export {initSliderAdv};
+

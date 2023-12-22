@@ -25,7 +25,7 @@ const initSliderGallery = () => {
           slidesPerView: 3,
           spaceBetween: 5,
           slidesPerGroup: 2,
-          initialSlide: 0,
+          initialSlide: 5,
         },
 
         320: {

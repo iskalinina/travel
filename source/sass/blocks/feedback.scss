@@ -87,6 +87,10 @@
   }
 }
 
+.feedback__input {
+  position: relative;
+}
+
 .feedback__input input {
   @include text(16px, 16px);
 
@@ -134,4 +138,15 @@
     width: 290px;
     padding: 20px 0;
   }
+}
+
+.feedback__input.is-invalid input {
+  border-color: #ff121f;
+  color: rgba(45,56,63,.5);
+}
+
+.input-message {
+  @include text(14px, 14px);
+  color: #ff121f;
+  display: block;
 }

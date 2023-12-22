@@ -69,6 +69,7 @@
     padding: 39px 0 70px 45px;
     background-color: $color-default-white;
     display: none;
+    z-index: 150;
   }
 
   @include vp-767 {
