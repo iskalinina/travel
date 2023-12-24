@@ -624,18 +624,22 @@
           </div>
         </section>
         <section class="reviews container" data-test="reviews" id="reviews">
-          <h2 class="reviews__heading" data-heading="Отзывы">Отзывы</h2>
-          <div class="reviews__navigation">
-            <button class="reviews__navigation-button reviews__navigation-button--prev btn btn--slider-navigation" data-button="reviews-prev" type="button" aria-label="Предыдущий слайд">
-              <svg width="16" height="16" viewBox="0 0 16 16" role="img">
-                <use href="img/sprite.svg#big-arrow"></use>
-              </svg>
-            </button>
-            <button class="reviews__navigation-button reviews__navigation-button--next btn btn--slider-navigation" data-button="reviews-next" type="button" aria-label="Следующий слайд">
-              <svg width="16" height="16" viewBox="0 0 16 16" role="img">
-                <use href="img/sprite.svg#big-arrow"></use>
-              </svg>
-            </button>
+          <div class="reviews__header">
+            <div class="reviews__heading-wrapper">
+              <h2 class="reviews__heading" data-heading="Отзывы">Отзывы</h2>
+            </div>
+            <div class="reviews__navigation">
+              <button class="reviews__navigation-button reviews__navigation-button--prev btn btn--slider-navigation" data-button="reviews-prev" type="button" aria-label="Предыдущий слайд">
+                <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                  <use href="img/sprite.svg#big-arrow"></use>
+                </svg>
+              </button>
+              <button class="reviews__navigation-button reviews__navigation-button--next btn btn--slider-navigation" data-button="reviews-next" type="button" aria-label="Следующий слайд">
+                <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                  <use href="img/sprite.svg#big-arrow"></use>
+                </svg>
+              </button>
+            </div>
           </div>
           <div class="swiper" data-slider="reviews">
             <ul class="reviews__list swiper-wrapper">
@@ -753,7 +757,9 @@
           </div>
         </section>
         <section class="advantages" data-test="adv">
-          <h2 class="advantages__heading" data-heading="Преимущества">Преимущества</h2>
+          <div class="advantages__heading-wrapper">
+            <h2 class="advantages__heading" data-heading="Преимущества">Преимущества</h2>
+          </div>
           <div class="swiper" data-slider="advantages">
             <ul class="advantages__list swiper-wrapper">
               <li class="advantages__item swiper-slide">
@@ -815,7 +821,7 @@
                   </svg>
                 </div>
                 <div class="advantages__title">
-                  <h3>Бережное отношение<br class="advantages__br"> к природе</h3>
+                  <h3><span>Бережное отношение</span><br class="advantages__br">к&nbsp;природе</h3>
                 </div>
                 <div class="advantages__text">
                   <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>

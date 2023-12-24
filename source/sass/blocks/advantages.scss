@@ -7,7 +7,7 @@
   }
 
   @include vp-767 {
-    padding: 46px 15px 40px;
+    padding: 40px 15px;
   }
 }
 
@@ -16,6 +16,15 @@
 
   @include vp-1199 {
     margin-bottom: 0;
+  }
+}
+
+.advantages__heading-wrapper {
+  @include vp-767 {
+    height: 29px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
   }
 }
 
@@ -45,8 +54,7 @@
 
   @include vp-767 {
     @include text(22px, 22px, $ff-extrabold);
-
-    margin-bottom: 20px;
+    margin: 0 auto;
   }
 }
 
@@ -70,7 +78,7 @@
   max-width: 380px;
   height: auto;
   padding: 39px 19px;
-  border: 1px solid rgba($color-grey, 0.1);
+  border: 1px solid rgba($color-accent, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,5 +172,11 @@
 
   @include vp-1199 {
     display: block;
+  }
+}
+
+.advantages__item:last-child h3 span{
+  @include vp-767 {
+    margin-left: -4px;
   }
 }

@@ -1,15 +1,15 @@
 .reviews {
   position: relative;
-  padding-top: 52px;
+  padding-top: 30px;
 
   @include vp-1199 {
-    padding-top: 55px;
+    padding-top: 37px;
     padding-bottom: 37px;
   }
 
   @include vp-767 {
-    padding-top: 39px;
-    padding-bottom: 29px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -25,11 +25,42 @@
   }
 }
 
+.reviews__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  margin-bottom: 30px;
+
+  @include vp-1199 {
+    height: 49px;
+  }
+
+  @include vp-767 {
+    height: 35px;
+    margin-bottom: 15px;
+  }
+}
+
+.reviews__heading-wrapper {
+  @include vp-1199 {
+    align-self: flex-end;
+  }
+
+  @include vp-767 {
+    align-self: center;
+    height: 28px;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
 .reviews__heading {
   @include text(35px, 35px, $ff-extrabold);
 
+  align-self: flex-end;
   color: $color-dark;
-  margin: 0 0 27px;
+  margin: 0 0 -3px;
   position: relative;
 
   &::before {
@@ -44,6 +75,8 @@
 
     @include vp-1199 {
       @include text(40px, 40pxx, $ff-extrabold);
+
+      padding-left: 1px;
     }
 
     @include vp-767 {
@@ -54,31 +87,28 @@
   @include vp-1199 {
     @include text(25px, 25px, $ff-extrabold);
 
-    margin-bottom: 36px;
+    margin-bottom: 0;
+    padding-left: 1px;
+    padding-bottom: 6px;
   }
 
   @include vp-767 {
     @include text(22px, 22px, $ff-extrabold);
 
-    margin-bottom: 18px;
+    margin-bottom: 0;
+    align-self: initial;
+    padding-bottom: 0;
   }
 }
 
 .reviews__navigation {
-  position: absolute;
-  top: 40px;
-  right: 120px;
   display: flex;
   gap: 4px;
 
   @include vp-1199 {
-    top: 44px;
-    right: 45px;
   }
 
   @include vp-767 {
-    top: 30px;
-    right: 15px;
   }
 }
 
@@ -107,30 +137,43 @@
     max-width: 565px;
     min-height: 277px;
     padding: 20px 30px 20px 20px;
+    box-shadow: 0 0 30px 0 rgba($color-accent-dark, 0.1);
   }
 
   @include vp-767 {
     flex-direction: column;
-    padding: 21px 20px 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px 0 rgba($color-accent-dark, 0.1);
     min-height: 466px;
     max-width: 100%;
-    gap: 16px;
+    gap: 20px;
   }
 }
 
 .reviews__photo {
   background-color: $color-grey;
   flex-shrink: 0;
+
+  @include vp-767 {
+    max-height: 169px;
+    flex-shrink: initial;
+    overflow: hidden;
+  }
 }
 
 .reviews__photo img {
   object-fit: cover;
   height: 100%;
+  width: 100%;
 }
 
 .reviews__text {
   @include vp-1199 {
     padding-top: 3px;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
   }
 }
 
@@ -146,7 +189,11 @@
 
 .reviews__text > p:not(:last-child) {
   @include vp-1199 {
-    margin-bottom: 10px;
+    margin-bottom: 11px;
+  }
+
+  @include vp-767 {
+    margin-top: -1px;
   }
 }
 
