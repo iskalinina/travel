@@ -2062,7 +2062,7 @@ button,
 }
 .hero__media--music {
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 20px;
   height: 227px;
 }
 .hero__media--photo {
@@ -3217,6 +3217,25 @@ button,
   }
 }
 
+.about__decor {
+  position: absolute;
+  top: -110px;
+  left: 820px;
+  z-index: -50;
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .about__decor {
+    top: -298px;
+    right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .about__decor {
+    display: none;
+  }
+}
+
 .reviews {
   position: relative;
   padding-top: 30px;
@@ -3359,6 +3378,7 @@ button,
   display: flex;
   gap: 4px;
 }
+
 .reviews__navigation-button--next {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -3376,6 +3396,7 @@ button,
           box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
   padding: 20px 40px 20px 20px;
   border: 0 solid #ffffff;
+  background-color: #ffffff;
   min-height: 293px;
   max-width: 700px;
   display: -webkit-box;
@@ -3511,6 +3532,7 @@ button,
 .advantages {
   padding-top: 65px;
   padding-bottom: 81px;
+  position: relative;
 }
 @media (max-width: 1199px) {
   .advantages {
@@ -3609,6 +3631,7 @@ button,
   max-width: 380px;
   height: auto;
   padding: 39px 19px;
+  background-color: #ffffff;
   border: 1px solid rgba(2, 102, 193, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3744,6 +3767,19 @@ button,
 @media (max-width: 767px) {
   .advantages__item:last-child h3 span {
     margin-left: -4px;
+  }
+}
+
+.advantages__decor {
+  position: absolute;
+  bottom: 320px;
+  left: 0;
+  z-index: -50;
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .advantages__decor {
+    display: none;
   }
 }
 

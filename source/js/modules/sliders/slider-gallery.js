@@ -1,11 +1,12 @@
+import swiper from '../../vendor/swiper.js';
+
 const sliderGallery = document.querySelector('[data-slider="gallery"]');
 const buttonNext = document.querySelector('[data-button="gallery-next"]');
 const buttonPrev = document.querySelector('[data-button="gallery-prev"]');
 
 const initSliderGallery = () => {
   if (sliderGallery) {
-    // eslint-disable-next-line
-    new Swiper(sliderGallery, {
+    new swiper(sliderGallery, {
 
       navigation: {
         nextEl: buttonNext,

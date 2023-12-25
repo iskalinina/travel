@@ -10,7 +10,6 @@ let swiperInner;
 
 function initSliderAdv() {
   if (sliderAdv && desktop.matches) {
-    // eslint-disable-next-line
     swiperInner = new swiper(sliderAdv, {
       loop: true,
       slidesPerView: 'auto',

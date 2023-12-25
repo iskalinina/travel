@@ -143,3 +143,20 @@
     display: none;
   }
 }
+
+.about__decor {
+  position: absolute;
+  top: -110px;
+  left: 820px;
+  z-index: -50;
+  overflow: hidden;
+
+  @include vp-1199 {
+    top: -298px;
+    right: 0;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

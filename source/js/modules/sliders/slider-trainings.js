@@ -1,11 +1,12 @@
+import swiper from '../../vendor/swiper.js';
+
 const sliderTrainings = document.querySelector('[data-slider="trainings"]');
 const buttonNext = document.querySelector('[data-button="trainings-next"]');
 const buttonPrev = document.querySelector('[data-button="trainings-prev"]');
 
 const initSliderTrainings = () => {
   if (sliderTrainings) {
-    // eslint-disable-next-line
-    new Swiper(sliderTrainings, {
+    new swiper(sliderTrainings, {
 
       navigation: {
         nextEl: buttonNext,

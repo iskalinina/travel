@@ -6,7 +6,6 @@ const buttonPrev = document.querySelector('[data-button="reviews-prev"]');
 
 const initSliderReviews = () => {
   if (sliderReviews) {
-    // eslint-disable-next-line
     new swiper(sliderReviews, {
 
       slidesPerView: 'auto',

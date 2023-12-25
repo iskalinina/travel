@@ -1,6 +1,7 @@
 .advantages {
   padding-top: 65px;
   padding-bottom: 81px;
+  position: relative;
 
   @include vp-1199 {
     padding: 68px 45px 45px;
@@ -54,6 +55,7 @@
 
   @include vp-767 {
     @include text(22px, 22px, $ff-extrabold);
+
     margin: 0 auto;
   }
 }
@@ -78,6 +80,7 @@
   max-width: 380px;
   height: auto;
   padding: 39px 19px;
+  background-color: $color-default-white;
   border: 1px solid rgba($color-accent, 0.1);
   display: flex;
   flex-direction: column;
@@ -175,8 +178,20 @@
   }
 }
 
-.advantages__item:last-child h3 span{
+.advantages__item:last-child h3 span {
   @include vp-767 {
     margin-left: -4px;
+  }
+}
+
+.advantages__decor {
+  position: absolute;
+  bottom: 320px;
+  left: 0;
+  z-index: -50;
+  overflow: hidden;
+
+  @include vp-1199 {
+    display: none;
   }
 }
