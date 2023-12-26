@@ -13,10 +13,10 @@
   main {
     flex-grow: 1;
   }
+}
 
-  &--overlay {
-    overflow: hidden;
-  }
+body.is-open {
+  overflow: hidden;
 }
 
 .overlay {

@@ -66,16 +66,20 @@
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   align-content: space-between;
+  max-width: 580px;
 
   @include vp-1199 {
+    max-width: 500px;
     gap: 20px;
   }
 
   @include vp-767 {
     padding: 0 12px;
     width: 100%;
+    max-width: 320px;
     align-items: center;
     gap: 15px;
     max-height: 73px;

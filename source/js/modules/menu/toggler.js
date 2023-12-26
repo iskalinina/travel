@@ -9,6 +9,7 @@ const onTogglerClick = () => {
   mainNav.classList.toggle('is-open');
   menuToggler.classList.toggle('is-open');
   overlay.classList.toggle('is-open');
+  document.body.classList.toggle('is-open');
   wrapper.classList.toggle('wrapper--overlay');
 };
 

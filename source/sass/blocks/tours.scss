@@ -88,6 +88,17 @@
 
   color: $color-default-white;
   margin: 0 0 30px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: rgba($color-default-white, 0.2);
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+  }
 }
 
 .tours__header p {

@@ -196,7 +196,8 @@
   }
 }
 
-.contacts__item span {
+.contacts__item span,
+.contacts__item a {
   @include text(16px, 24px);
 
   margin: 0;

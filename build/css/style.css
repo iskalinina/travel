@@ -1398,7 +1398,8 @@ button,
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.wrapper--overlay {
+
+body.is-open {
   overflow: hidden;
 }
 
@@ -2266,6 +2267,16 @@ button,
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 30px;
+  position: relative;
+}
+.tours__item h3::before {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  left: 0;
+  bottom: -15px;
 }
 
 .tours__header p {
@@ -4255,12 +4266,16 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+  max-width: 580px;
 }
 @media (max-width: 1199px) {
   .footer__menu {
+    max-width: 500px;
     gap: 20px;
   }
 }
@@ -4268,6 +4283,7 @@ button,
   .footer__menu {
     padding: 0 12px;
     width: 100%;
+    max-width: 320px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -4693,21 +4709,24 @@ button,
   }
 }
 
-.contacts__item span {
+.contacts__item span,
+.contacts__item a {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   margin: 0;
 }
 @media (max-width: 1199px) {
-  .contacts__item span {
+  .contacts__item span,
+.contacts__item a {
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
   }
 }
 @media (max-width: 767px) {
-  .contacts__item span {
+  .contacts__item span,
+.contacts__item a {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
